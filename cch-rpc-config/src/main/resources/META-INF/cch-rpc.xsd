@@ -1,0 +1,102 @@
+<xsd:schema
+        xmlns="http://chiuchiehhwang.github.io/schema/cch-rpc"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://chiuchiehhwang.github.io/schema/cch-rpc">
+    <xsd:complexType name="applicationType">
+        <xsd:attribute name="name" type="xsd:string">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ The application name. ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="protocol" type="xsd:string">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ The application protocol. ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:element name="application" type="applicationType">
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[ application document ]]></xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+
+
+
+    <xsd:complexType name="registryType">
+        <xsd:attribute name="address" type="xsd:string">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ The application name. ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:element name="registry" type="registryType">
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[ application document ]]></xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+
+
+
+    <xsd:complexType name="protocolType">
+        <xsd:attribute name="name" type="xsd:string">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ The application name. ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="port" type="xsd:string">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ The application protocol. ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:element name="protocol" type="protocolType">
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[ application document ]]></xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+
+
+
+    <xsd:complexType name="serviceType">
+        <xsd:attribute name="interface" type="xsd:string">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ The application name. ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="ref" type="xsd:string">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ The application protocol. ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:element name="service" type="serviceType">
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[ application document ]]></xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+
+
+
+    <xsd:complexType name="referenceType">
+        <xsd:attribute name="id" type="xsd:string">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ The application name. ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="interface" type="xsd:string">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ The application protocol. ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:complexType>
+
+    <xsd:element name="reference" type="referenceType">
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[ application document ]]></xsd:documentation>
+        </xsd:annotation>
+    </xsd:element>
+</xsd:schema>
