@@ -1,6 +1,6 @@
 package hwang.chiuchieh.rpc.spi;
 
-import hwang.chiuchieh.rpc.test.api.Info;
+import hwang.chiuchieh.rpc.api.Info;
 import hwang.chiuchieh.rpc.test.api.SPITest;
 import org.junit.Test;
 

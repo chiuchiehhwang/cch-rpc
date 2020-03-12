@@ -1,4 +1,4 @@
-package hwang.chiuchieh.rpc.test.api;
+package hwang.chiuchieh.rpc.api;
 
 import lombok.Data;
 

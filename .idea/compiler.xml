@@ -9,17 +9,12 @@
         <module name="cch-rpc-test-module" />
         <module name="cch-rpc-test-api" />
         <module name="cch-rpc-registry" />
+        <module name="cch-rpc-common" />
         <module name="cch-rpc-api" />
         <module name="cch-rpc-remoting" />
         <module name="cch-rpc-protocol" />
         <module name="cch-rpc-config" />
         <module name="cch-rpc-test-spitest" />
-      </profile>
-      <profile name="Annotation profile for cch-rpc" enabled="true">
-        <sourceOutputDir name="../cch-rpc-core/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../cch-rpc-core/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="cch-rpc-common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">

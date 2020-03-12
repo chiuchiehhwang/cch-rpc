@@ -1,6 +1,6 @@
 package hwang.chiuchieh.rpc.test.spitest;
 
-import hwang.chiuchieh.rpc.test.api.Info;
+import hwang.chiuchieh.rpc.api.Info;
 import hwang.chiuchieh.rpc.test.api.SPITest;
 
 public class SPITestImpl2 implements SPITest {

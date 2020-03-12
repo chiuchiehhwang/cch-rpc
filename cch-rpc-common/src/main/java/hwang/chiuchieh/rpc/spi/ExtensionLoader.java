@@ -1,7 +1,7 @@
 package hwang.chiuchieh.rpc.spi;
 
-import hwang.chiuchieh.rpc.test.api.Info;
-import hwang.chiuchieh.rpc.test.api.SPI;
+import hwang.chiuchieh.rpc.api.Info;
+import hwang.chiuchieh.rpc.api.SPI;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -36,7 +36,7 @@ public class ExtensionLoader<T> {
         holder = new ConcurrentHashMap<>();
     }
 
-    public static ExtensionLoader getExtesionLoader(Class clazz) {
+    public static <T> ExtensionLoader<T> getExtesionLoader(Class<T> clazz) {
         if(clazz == null) {
             throw new IllegalArgumentException("class == null");
         }
