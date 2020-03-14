@@ -42,9 +42,6 @@ public class CchrpcBeanDefinitionParser implements BeanDefinitionParser {
             beanDefinition.getPropertyValues().add("interfaceName", element.getAttribute("interface"));
         }
 
-
-
-
         BeanDefinitionRegistry beanDefinitionRegistry = parserContext.getRegistry();
         beanDefinitionRegistry.registerBeanDefinition(beanClass.getName(),beanDefinition);
 
