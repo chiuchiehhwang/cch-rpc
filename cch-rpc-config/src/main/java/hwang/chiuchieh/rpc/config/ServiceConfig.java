@@ -1,11 +1,11 @@
 package hwang.chiuchieh.rpc.config;
 
 import hwang.chiuchieh.rpc.api.Info;
-import hwang.chiuchieh.rpc.api.Protocol;
-import hwang.chiuchieh.rpc.api.Registry;
+import hwang.chiuchieh.rpc.protocol.api.Protocol;
 import hwang.chiuchieh.rpc.proxy.CchProxyFactory;
 import hwang.chiuchieh.rpc.api.Invoker;
 import hwang.chiuchieh.rpc.proxy.ProxyFactory;
+import hwang.chiuchieh.rpc.registry.api.Registry;
 import hwang.chiuchieh.rpc.spi.ExtensionLoader;
 import lombok.Data;
 

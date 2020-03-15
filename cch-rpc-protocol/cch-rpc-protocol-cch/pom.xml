@@ -3,18 +3,21 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>cch-rpc</artifactId>
+        <artifactId>cch-rpc-protocol</artifactId>
         <groupId>hwang.chiuchieh</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cch-rpc-registry</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>cch-rpc-registry-api</module>
-        <module>cch-rpc-registry-zookeeper</module>
-    </modules>
+    <artifactId>cch-rpc-protocol-cch</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>hwang.chiuchieh</groupId>
+            <artifactId>cch-rpc-protocol-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 
 </project>
