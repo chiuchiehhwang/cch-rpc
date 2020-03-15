@@ -2,25 +2,24 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cch-rpc-test-module" />
+        <module name="cch-rpc-test-spitest" />
         <module name="cch-rpc-test-api" />
-        <module name="cch-rpc-registry-zookeeper" />
+        <module name="cch-rpc-protocol-api" />
         <module name="cch-rpc-common" />
         <module name="cch-rpc-api" />
-        <module name="cch-rpc-registry-api" />
         <module name="cch-rpc-remoting" />
-        <module name="cch-rpc-protocol-cch" />
+        <module name="cch-rpc-registry-zookeeper" />
         <module name="cch-rpc-config" />
-        <module name="cch-rpc-protocol-api" />
-        <module name="cch-rpc-test-spitest" />
+        <module name="cch-rpc-registry-api" />
+        <module name="cch-rpc-protocol-cch" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11">
-      <module name="cch-rpc-core-api" target="11" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="11" />
   </component>
 </project>
