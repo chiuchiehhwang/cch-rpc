@@ -1,4 +1,6 @@
 package hwang.chiuchieh.rpc.remoting.netty;
 
-public class CchServerHandler{
+import io.netty.channel.ChannelInboundHandlerAdapter;
+
+public class CchServerHandler extends ChannelInboundHandlerAdapter {
 }

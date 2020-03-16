@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-config/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-config/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-protocol" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-registry" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-zookeeper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-zookeeper/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-remoting" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-remoting/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-module" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-module/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-module/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-spitest" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-spitest/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-spitest/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

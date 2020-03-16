@@ -15,6 +15,7 @@
         <module name="cch-rpc-api" />
         <module name="cch-rpc-remoting" />
         <module name="cch-rpc-registry-zookeeper" />
+        <module name="cch-rpc-test-moudle" />
         <module name="cch-rpc-config" />
         <module name="cch-rpc-registry-api" />
         <module name="cch-rpc-protocol-cch" />
