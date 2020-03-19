@@ -24,6 +24,7 @@
 + DataLength(32)
 
 协议体(DataLength)
-+ RequestBody/ResponseBody
++ Body
   + 如果为请求，则为请求体
   + 如果为响应，则为响应体
+  + 根据MsgType的不同，Body有不同的定义
