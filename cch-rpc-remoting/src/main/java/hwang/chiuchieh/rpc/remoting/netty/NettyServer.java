@@ -13,11 +13,14 @@ import java.net.InetSocketAddress;
 
 public class NettyServer extends AbstractServer {
 
-    CchServerHandler handler = new CchServerHandler();
+    ServerHandler handler = new ServerHandler();
+    ServerMessageDecoder decoder = new ServerMessageDecoder();
+    ServerMessageEncoder encoder = new ServerMessageEncoder();
+
     EventLoopGroup group = new NioEventLoopGroup();
 
-    public NettyServer(String host, String port) {
-        super(host, port);
+    public NettyServer(String port) {
+        super(port);
     }
 
 
@@ -30,6 +33,8 @@ public class NettyServer extends AbstractServer {
                 .childHandler(new ChannelInitializer<SocketChannel>() {
                     @Override
                     protected void initChannel(SocketChannel ch) throws Exception {
+                        ch.pipeline().addLast(encoder);
+                        ch.pipeline().addLast(decoder);
                         ch.pipeline().addLast(handler);
                     }
                 });
@@ -39,7 +44,7 @@ public class NettyServer extends AbstractServer {
                 return true;
             }
         } catch (InterruptedException e) {
-            //TODO
+            //TODO 打日志
         }
         return false;
     }

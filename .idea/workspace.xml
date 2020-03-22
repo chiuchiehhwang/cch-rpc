@@ -2,7 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88de88a8-1ba3-4fa1-9da3-0bb8f6a2f500" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/api/RpcInvocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/Body.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/RpcContext.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/RpcRequestBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/RpcResponseFailBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/RpcResponseSuccessBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/enums/MsgType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/enums/SerializationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/exception/MagicIncorrectException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/serialization/GsonSerialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/api/AbstractServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/api/AbstractServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/CchServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/ServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/MessageDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/ServerMessageDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/MessageEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/ServerMessageEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/NettyServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +36,7 @@
         <option value="JUnit4 Test Class" />
         <option value="spring-beans.schema" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -48,6 +66,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -71,12 +90,6 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-protocol\cch-rpc-protocol-cch\src\main\resources" />
-      <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-test\cch-rpc-test-spitest\src\main\resources\META-INF" />
-      <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-test\cch-rpc-test-spitest\src\main\resources" />
-      <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-test\src\main\resources\META-INF" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="hwang.chiuchieh.rpc.registry.api" />
       <recent name="hwang.chiuchieh.rpc.protocol.api" />
@@ -84,17 +97,24 @@
       <recent name="hwang.chiuchieh.rpc.protocol.cch" />
       <recent name="hwang.chiuchieh.rpc.test.api" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="hwang.chiuchieh.rpc.remoting.netty" />
-      <recent name="hwang.chiuchieh.rpc.test" />
-      <recent name="test" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-registry\cch-rpc-registry-zookeeper\src\main\resources" />
       <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-registry\src\main\resources" />
       <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-protocol\src\main\resources" />
       <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-config\src\main\resources\META-INF" />
       <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-config\src\main\resources\META-INF\cch-rpc" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="hwang.chiuchieh.rpc.remoting.cchprotocol.enums" />
+      <recent name="hwang.chiuchieh.rpc.remoting.netty" />
+      <recent name="hwang.chiuchieh.rpc.test" />
+      <recent name="test" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-protocol\cch-rpc-protocol-cch\src\main\resources" />
+      <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-test\cch-rpc-test-spitest\src\main\resources\META-INF" />
+      <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-test\cch-rpc-test-spitest\src\main\resources" />
+      <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-test\src\main\resources\META-INF" />
     </key>
   </component>
   <component name="RunManager" selected="Application.XmlConfigTest">
@@ -203,7 +223,9 @@
       <workItem from="1584287629449" duration="944000" />
       <workItem from="1584288606383" duration="898000" />
       <workItem from="1584289541668" duration="264000" />
-      <workItem from="1584319810822" duration="15791000" />
+      <workItem from="1584319810822" duration="16551000" />
+      <workItem from="1584781410108" duration="2524000" />
+      <workItem from="1584861775786" duration="15063000" />
     </task>
     <servers />
   </component>
@@ -252,22 +274,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="530" y="75" key="#com.intellij.ide.util.MemberChooser" timestamp="1584372714847">
+    <state x="530" y="75" key="#com.intellij.ide.util.MemberChooser" timestamp="1584884972864">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="530" y="75" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1584372714847" />
+    <state x="530" y="75" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1584884972864" />
     <state x="570" y="194" key="FileChooserDialogImpl" timestamp="1584368460357">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="570" y="194" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1584368460357" />
-    <state x="270" y="0" key="SettingsEditor" timestamp="1584630123060">
+    <state x="248" y="0" key="SettingsEditor" timestamp="1584864187970">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="270" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1584630123060" />
-    <state x="454" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1584319813155">
+    <state x="248" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1584864187970" />
+    <state x="454" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1584864045490">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="454" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1584319813155" />
+    <state x="454" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1584864045490" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
