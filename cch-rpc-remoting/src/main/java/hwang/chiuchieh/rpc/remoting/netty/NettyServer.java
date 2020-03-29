@@ -10,6 +10,8 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 import java.net.InetSocketAddress;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class NettyServer extends AbstractServer {
 
@@ -19,6 +21,8 @@ public class NettyServer extends AbstractServer {
 
     EventLoopGroup group = new NioEventLoopGroup();
 
+    private static Map<String, NettyServer> serverMap = new ConcurrentHashMap<>();
+
     public NettyServer(String port) {
         super(port);
     }
@@ -26,6 +30,9 @@ public class NettyServer extends AbstractServer {
 
     @Override
     public boolean openServer() {
+        if (serverMap.get(port) != null) {
+            return true;
+        }
         ServerBootstrap serverBootstrap = new ServerBootstrap();
         serverBootstrap.group(group)
                 .channel(NioServerSocketChannel.class)
@@ -41,6 +48,7 @@ public class NettyServer extends AbstractServer {
         try {
             ChannelFuture future = serverBootstrap.bind().sync();
             if (future.isSuccess()) {
+                serverMap.put(port, this);
                 return true;
             }
         } catch (InterruptedException e) {

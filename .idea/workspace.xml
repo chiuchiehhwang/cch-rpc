@@ -2,23 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88de88a8-1ba3-4fa1-9da3-0bb8f6a2f500" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/api/RpcInvocation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/Body.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/RpcContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/RpcRequestBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/RpcResponseFailBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/RpcResponseSuccessBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/enums/MsgType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/enums/SerializationType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/exception/MagicIncorrectException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/serialization/GsonSerialization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/exceptions/CchRpcException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/util/StringUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/api/AbstractServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/api/AbstractServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/CchServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/ServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/MessageDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/ServerMessageDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/MessageEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/ServerMessageEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-api/src/main/java/hwang/chiuchieh/rpc/api/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-api/src/main/java/hwang/chiuchieh/rpc/api/Info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ProtocolConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ProtocolConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ServiceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CchProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CchProtocol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/RpcRequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/RpcRequestBody.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/RpcResponseFailBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/RpcResponseFailBody.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/RpcResponseSuccessBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/RpcResponseSuccessBody.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/NettyServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -225,7 +220,8 @@
       <workItem from="1584289541668" duration="264000" />
       <workItem from="1584319810822" duration="16551000" />
       <workItem from="1584781410108" duration="2524000" />
-      <workItem from="1584861775786" duration="15063000" />
+      <workItem from="1584861775786" duration="15896000" />
+      <workItem from="1585450948362" duration="9911000" />
     </task>
     <servers />
   </component>

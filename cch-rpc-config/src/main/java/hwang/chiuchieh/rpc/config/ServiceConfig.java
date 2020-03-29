@@ -1,13 +1,19 @@
 package hwang.chiuchieh.rpc.config;
 
 import hwang.chiuchieh.rpc.api.Info;
+import hwang.chiuchieh.rpc.exceptions.CchRpcException;
 import hwang.chiuchieh.rpc.protocol.api.Protocol;
 import hwang.chiuchieh.rpc.proxy.CchProxyFactory;
 import hwang.chiuchieh.rpc.api.Invoker;
 import hwang.chiuchieh.rpc.proxy.ProxyFactory;
 import hwang.chiuchieh.rpc.registry.api.Registry;
 import hwang.chiuchieh.rpc.spi.ExtensionLoader;
+import hwang.chiuchieh.rpc.util.StringUtils;
 import lombok.Data;
+
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.nio.file.Path;
 
 @Data
 public class ServiceConfig<T> {
@@ -98,7 +104,7 @@ public class ServiceConfig<T> {
         if(applicationConfig == null) {
             throw new IllegalArgumentException("no application's configuration");
         }
-        if(applicationConfig.getName() == null || applicationConfig.getName().length() == 0) {
+        if(StringUtils.isBlank(applicationConfig.getName())) {
             throw new IllegalArgumentException("application name is blank");
         }
     }
@@ -107,8 +113,20 @@ public class ServiceConfig<T> {
         if(protocolConfig == null) {
             protocolConfig = new ProtocolConfig();
         }
-        if(protocolConfig.getName() == null || protocolConfig.getName().length() == 0) {
+        if(StringUtils.isBlank(protocolConfig.getName())) {
             protocolConfig.setName(ProtocolConfig.DEFAULT_PROTOCOL);
+        }
+        if(StringUtils.isBlank(protocolConfig.getPort())) {
+            protocolConfig.setPort(ProtocolConfig.DEFAULT_PROTOCOL_PORT);
+        } else {
+            try {
+                int port = Integer.valueOf(protocolConfig.getPort());
+                if (port <= 1023) {
+                    throw new CchRpcException("port < 1024");
+                }
+            } catch (NumberFormatException e) {
+                throw new CchRpcException("port is invalid");
+            }
         }
     }
 
@@ -116,13 +134,25 @@ public class ServiceConfig<T> {
         if(registryConfig == null) {
             throw new IllegalArgumentException("no registry's configuration");
         }
-        if(registryConfig.getName() == null || registryConfig.getName().length() == 0) {
+        if(StringUtils.isBlank(registryConfig.getName())) {
             registryConfig.setName(RegistryConfig.DEFAULT_REGISTRY);
         }
     }
 
     private Info generateInfo() {
-        return null;
+        String host;
+        try {
+            host = InetAddress.getLocalHost().getHostAddress();
+        } catch (UnknownHostException e) {
+            throw new CchRpcException("can't get local address", e);
+        }
+        String port = protocolConfig.getPort();
+        String path = host + Info.PATH_SEPARATOR + port + Info.PATH_SEPARATOR + interfaceName;
+        Info info = new Info();
+        info.setHost(host);
+        info.setPort(port);
+        info.setPath(path);
+        return info;
     }
 
 }
