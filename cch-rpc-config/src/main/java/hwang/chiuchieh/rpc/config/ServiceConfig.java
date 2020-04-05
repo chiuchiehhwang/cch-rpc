@@ -8,12 +8,15 @@ import hwang.chiuchieh.rpc.api.Invoker;
 import hwang.chiuchieh.rpc.proxy.ProxyFactory;
 import hwang.chiuchieh.rpc.registry.api.Registry;
 import hwang.chiuchieh.rpc.spi.ExtensionLoader;
+import hwang.chiuchieh.rpc.util.CollectionUtils;
 import hwang.chiuchieh.rpc.util.StringUtils;
 import lombok.Data;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 public class ServiceConfig<T> {
@@ -89,11 +92,11 @@ public class ServiceConfig<T> {
     }
 
     private void checkConfig() {
-        if(interfaceName == null || interfaceName.length() == 0) {
-            throw new IllegalArgumentException("interface name is blank");
+        if(StringUtils.isBlank(interfaceName)) {
+            throw new CchRpcException("interface name is blank");
         }
         if(ref == null) {
-            throw new IllegalArgumentException("no instance of the class");
+            throw new CchRpcException("no instance of the class");
         }
         checkApplicationConfig();
         checkProtocolConfig();
@@ -102,10 +105,10 @@ public class ServiceConfig<T> {
 
     private void checkApplicationConfig() {
         if(applicationConfig == null) {
-            throw new IllegalArgumentException("no application's configuration");
+            throw new CchRpcException("no application's configuration");
         }
         if(StringUtils.isBlank(applicationConfig.getName())) {
-            throw new IllegalArgumentException("application name is blank");
+            throw new CchRpcException("application name is blank");
         }
     }
 
@@ -132,27 +135,65 @@ public class ServiceConfig<T> {
 
     private void checkRegistryConfig() {
         if(registryConfig == null) {
-            throw new IllegalArgumentException("no registry's configuration");
+            throw new CchRpcException("no registry's configuration");
         }
         if(StringUtils.isBlank(registryConfig.getName())) {
             registryConfig.setName(RegistryConfig.DEFAULT_REGISTRY);
         }
+        Set<String> registries = getRegistries();
+        if (CollectionUtils.isEmpty(registries)) {
+            throw new CchRpcException("no registry's address");
+        }
     }
 
     private Info generateInfo() {
+
         String host;
         try {
+            //获取本地IP
             host = InetAddress.getLocalHost().getHostAddress();
         } catch (UnknownHostException e) {
             throw new CchRpcException("can't get local address", e);
         }
         String port = protocolConfig.getPort();
         String path = host + Info.PATH_SEPARATOR + port + Info.PATH_SEPARATOR + interfaceName;
+
+        Set<String> registries = getRegistries();
+
         Info info = new Info();
         info.setHost(host);
         info.setPort(port);
         info.setPath(path);
+        info.setRegistries(new ArrayList<>(registries));
+
+        //填充SPI路由信息
+        info.put(Info.SPI_PROTOCOL, protocolConfig.getName());
+        info.put(Info.SPI_REGISTRY, registryConfig.getName());
+
         return info;
+    }
+
+    private Set<String> getRegistries() {
+        Set<String> registries = new HashSet<>();
+        if (registryConfig == null) {
+            return registries;
+        }
+        if (StringUtils.isNotBlank(registryConfig.getName())
+                && StringUtils.isNotBlank(registryConfig.getPort())) {
+            registries.add(registryConfig.getName()
+                    + RegistryConfig.HOST_NAME_SEPARATOR
+                    + registryConfig.getHost());
+        }
+        String addresses = registryConfig.getAddresses();
+        if (StringUtils.isNotBlank(addresses)) {
+            String[] addrArray = addresses.split(RegistryConfig.ADDRESS_SEPARATOR);
+            for (String addr : addrArray) {
+                if (StringUtils.isNotBlank(addr)) {
+                    registries.add(addr);
+                }
+            }
+        }
+        return registries;
     }
 
 }

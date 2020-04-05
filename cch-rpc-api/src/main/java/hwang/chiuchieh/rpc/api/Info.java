@@ -3,6 +3,7 @@ package hwang.chiuchieh.rpc.api;
 import lombok.Data;
 
 import java.util.HashMap;
+import java.util.List;
 
 @Data
 public class Info extends HashMap<String, String>{
@@ -18,18 +19,16 @@ public class Info extends HashMap<String, String>{
 
     private String port;
 
+    private String serviceName;
+
+    /**
+     * host:port
+     */
+    private List<String> registries;
+
     /**
      * host/port/serviceName
      */
     private String path;
-
-//    public String generateRegistryUrl() {
-//        return null;
-//    }
-//
-//    public String generateServiceUrl() {
-//        return null;
-//    }
-
 
 }

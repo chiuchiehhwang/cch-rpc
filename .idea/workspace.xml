@@ -2,19 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88de88a8-1ba3-4fa1-9da3-0bb8f6a2f500" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/exceptions/CchRpcException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/util/StringUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/util/CollectionUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-zookeeper/src/main/java/hwang/chiuchieh/rpc/registry/zookeeper/ZookeeperRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-moudle/src/main/java/hwang/chiuchieh/rpc/test/module/ServiceConfigTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-moudle/src/main/java/hwang/chiuchieh/rpc/test/module/TestService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-moudle/src/main/java/hwang/chiuchieh/rpc/test/module/TestServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cch-rpc-api/src/main/java/hwang/chiuchieh/rpc/api/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-api/src/main/java/hwang/chiuchieh/rpc/api/Info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ProtocolConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ProtocolConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/RegistryConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/RegistryConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ServiceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CchProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CchProtocol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/RpcRequestBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/RpcRequestBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/RpcResponseFailBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/RpcResponseFailBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/RpcResponseSuccessBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/cchprotocol/RpcResponseSuccessBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/NettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/resources/cch-rpc/hwang.chiuchieh.rpc.protocol.api.Protocol" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/resources/META-INF/cch-rpc/hwang.chiuchieh.rpc.protocol.api.Protocol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-zookeeper/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-zookeeper/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-zookeeper/src/main/resources/cch-rpc/hwang.chiuchieh.rpc.registry.api.Registry" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-zookeeper/src/main/resources/META-INF/cch-rpc/hwang.chiuchieh.rpc.registry.api.Registry" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-module/cch-rpc-test-module.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-moudle/cch-rpc-test-module.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-module/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-moudle/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-module/src/main/java/hwang/chiuchieh/rpc/test/module/XmlConfigTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-moudle/src/main/java/hwang/chiuchieh/rpc/test/module/XmlConfigTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-module/src/main/resources/XmlConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-moudle/src/main/resources/XmlConfig.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,10 +35,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Arquillian JUnit Test Class" />
-        <option value="JUnit4 Test Class" />
         <option value="spring-beans.schema" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="JUnit4 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -68,11 +75,12 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dubbo" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-moudle" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.30494505" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
@@ -85,12 +93,25 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-registry\cch-rpc-registry-zookeeper\src\main\resources\META-INF" />
+      <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-protocol\cch-rpc-protocol-cch\src\main\resources\META-INF" />
+      <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-protocol\cch-rpc-protocol-cch\src\main\resources" />
+      <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-test\cch-rpc-test-spitest\src\main\resources\META-INF" />
+      <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-test\cch-rpc-test-spitest\src\main\resources" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="hwang.chiuchieh.rpc.registry.api" />
       <recent name="hwang.chiuchieh.rpc.protocol.api" />
       <recent name="" />
       <recent name="hwang.chiuchieh.rpc.protocol.cch" />
       <recent name="hwang.chiuchieh.rpc.test.api" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="hwang.chiuchieh.rpc.remoting.cchprotocol.enums" />
+      <recent name="hwang.chiuchieh.rpc.remoting.netty" />
+      <recent name="hwang.chiuchieh.rpc.test" />
+      <recent name="test" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-registry\cch-rpc-registry-zookeeper\src\main\resources" />
@@ -99,36 +120,11 @@
       <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-config\src\main\resources\META-INF" />
       <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-config\src\main\resources\META-INF\cch-rpc" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="hwang.chiuchieh.rpc.remoting.cchprotocol.enums" />
-      <recent name="hwang.chiuchieh.rpc.remoting.netty" />
-      <recent name="hwang.chiuchieh.rpc.test" />
-      <recent name="test" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-protocol\cch-rpc-protocol-cch\src\main\resources" />
-      <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-test\cch-rpc-test-spitest\src\main\resources\META-INF" />
-      <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-test\cch-rpc-test-spitest\src\main\resources" />
-      <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-test\src\main\resources\META-INF" />
-    </key>
   </component>
-  <component name="RunManager" selected="Application.XmlConfigTest">
-    <configuration name="ExtensionLoader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hwang.chiuchieh.rpc.spi.ExtensionLoader" />
-      <module name="cch-rpc-common" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="XmlConfigTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hwang.chiuchieh.rpc.test.module.XmlConfigTest" />
-      <module name="cch-rpc-test-module" />
+  <component name="RunManager" selected="JUnit.ServiceConfigTest.export">
+    <configuration name="ServiceConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hwang.chiuchieh.rpc.config.ServiceConfig" />
+      <module name="cch-rpc-config" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="hwang.chiuchieh.rpc.test.module.*" />
@@ -171,12 +167,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ServiceConfigTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cch-rpc-test-moudle" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hwang.chiuchieh.rpc.test.module.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hwang.chiuchieh.rpc.test.module" />
+      <option name="MAIN_CLASS_NAME" value="hwang.chiuchieh.rpc.test.module.ServiceConfigTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceConfigTest.export" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cch-rpc-test-moudle" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hwang.chiuchieh.rpc.test.module.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hwang.chiuchieh.rpc.test.module" />
+      <option name="MAIN_CLASS_NAME" value="hwang.chiuchieh.rpc.test.module.ServiceConfigTest" />
+      <option name="METHOD_NAME" value="export" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.XmlConfigTest" />
-        <item itemvalue="JUnit.ExtensionLoaderTest.getAdaptiveExtension" />
+        <item itemvalue="JUnit.ServiceConfigTest.export" />
+        <item itemvalue="JUnit.ServiceConfigTest" />
         <item itemvalue="JUnit.ExtensionLoaderTest.getExtension" />
-        <item itemvalue="Application.ExtensionLoader" />
+        <item itemvalue="JUnit.ExtensionLoaderTest.getAdaptiveExtension" />
+        <item itemvalue="Application.ServiceConfig" />
       </list>
     </recent_temporary>
   </component>
@@ -221,41 +249,12 @@
       <workItem from="1584319810822" duration="16551000" />
       <workItem from="1584781410108" duration="2524000" />
       <workItem from="1584861775786" duration="15896000" />
-      <workItem from="1585450948362" duration="9911000" />
+      <workItem from="1585450948362" duration="10006000" />
+      <workItem from="1586006991880" duration="3027000" />
+      <workItem from="1586010578737" duration="349000" />
+      <workItem from="1586010953768" duration="18698000" />
     </task>
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="ExtensionLoaderTest_getExtension - 2020.02.26 at 20h 25m 36s.xml">
-      <configuration name="ExtensionLoaderTest.getExtension" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExtensionLoaderTest_getExtension - 2020.02.26 at 22h 21m 16s.xml">
-      <configuration name="ExtensionLoaderTest.getExtension" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExtensionLoaderTest_getAdaptiveExtension - 2020.02.26 at 22h 21m 27s.xml">
-      <configuration name="ExtensionLoaderTest.getAdaptiveExtension" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExtensionLoaderTest_getExtension - 2020.02.26 at 22h 25m 41s.xml">
-      <configuration name="ExtensionLoaderTest.getExtension" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExtensionLoaderTest_getExtension - 2020.02.26 at 22h 29m 22s.xml">
-      <configuration name="ExtensionLoaderTest.getExtension" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExtensionLoaderTest_getExtension - 2020.02.26 at 22h 29m 36s.xml">
-      <configuration name="ExtensionLoaderTest.getExtension" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExtensionLoaderTest_getAdaptiveExtension - 2020.02.26 at 22h 29m 42s.xml">
-      <configuration name="ExtensionLoaderTest.getAdaptiveExtension" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExtensionLoaderTest_getExtension - 2020.02.29 at 19h 12m 14s.xml">
-      <configuration name="ExtensionLoaderTest.getExtension" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExtensionLoaderTest_getExtension - 2020.03.11 at 21h 08m 40s.xml">
-      <configuration name="ExtensionLoaderTest.getExtension" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ExtensionLoaderTest_getAdaptiveExtension - 2020.03.11 at 21h 08m 46s.xml">
-      <configuration name="ExtensionLoaderTest.getAdaptiveExtension" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -270,22 +269,82 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="530" y="75" key="#com.intellij.ide.util.MemberChooser" timestamp="1584884972864">
+    <state x="530" y="75" key="#com.intellij.ide.util.MemberChooser" timestamp="1586095796450">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="530" y="75" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1584884972864" />
-    <state x="570" y="194" key="FileChooserDialogImpl" timestamp="1584368460357">
+    <state x="530" y="75" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1586095796450" />
+    <state x="570" y="123" key="FileChooserDialogImpl" timestamp="1586097115300">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="570" y="194" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1584368460357" />
-    <state x="248" y="0" key="SettingsEditor" timestamp="1584864187970">
+    <state x="570" y="123" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1586097115300" />
+    <state width="1483" height="364" key="GridCell.Tab.0.bottom" timestamp="1586103242819">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="248" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1584864187970" />
-    <state x="454" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1584864045490">
+    <state width="1483" height="364" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586103242819" />
+    <state width="1483" height="364" key="GridCell.Tab.0.center" timestamp="1586103242819">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="454" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1584864045490" />
+    <state width="1483" height="364" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1586103242819" />
+    <state width="1483" height="364" key="GridCell.Tab.0.left" timestamp="1586103242819">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1483" height="364" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1586103242819" />
+    <state width="1483" height="364" key="GridCell.Tab.0.right" timestamp="1586103242819">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1483" height="364" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1586103242819" />
+    <state width="1483" height="271" key="GridCell.Tab.1.bottom" timestamp="1586103200555">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1483" height="271" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586103200555" />
+    <state width="1483" height="271" key="GridCell.Tab.1.center" timestamp="1586103200555">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1483" height="271" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1586103200555" />
+    <state width="1483" height="271" key="GridCell.Tab.1.left" timestamp="1586103200555">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1483" height="271" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1586103200555" />
+    <state width="1483" height="271" key="GridCell.Tab.1.right" timestamp="1586103200555">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1483" height="271" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1586103200555" />
+    <state x="330" y="65" key="NewModule_or_Project.wizard" timestamp="1586097124220">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="330" y="65" key="NewModule_or_Project.wizard/0.0.1536.864@0.0.1536.864" timestamp="1586097124220" />
+    <state x="242" y="0" key="SettingsEditor" timestamp="1586097128622">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="242" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1586097128622" />
+    <state x="454" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1586010954828">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="454" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1586010954828" />
+    <state x="453" y="85" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1586095720093">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="453" y="85" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.864@0.0.1536.864" timestamp="1586095720093" />
+    <state x="347" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1586084771215">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="347" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1586084771215" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/spi/ExtensionLoader.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/spi/ExtensionLoader.java</url>
+          <line>93</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

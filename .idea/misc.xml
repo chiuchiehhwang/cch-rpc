@@ -9,6 +9,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/cch-rpc-api/pom.xml" />
+        <option value="$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-moudle/pom.xml" />
       </list>
     </option>
   </component>
