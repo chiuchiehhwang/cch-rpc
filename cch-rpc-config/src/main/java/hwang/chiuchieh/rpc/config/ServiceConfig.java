@@ -1,11 +1,10 @@
 package hwang.chiuchieh.rpc.config;
 
 import hwang.chiuchieh.rpc.api.Info;
+import hwang.chiuchieh.rpc.protocol.api.ProxyFactory;
 import hwang.chiuchieh.rpc.exceptions.CchRpcException;
 import hwang.chiuchieh.rpc.protocol.api.Protocol;
-import hwang.chiuchieh.rpc.proxy.CchProxyFactory;
 import hwang.chiuchieh.rpc.api.Invoker;
-import hwang.chiuchieh.rpc.proxy.ProxyFactory;
 import hwang.chiuchieh.rpc.registry.api.Registry;
 import hwang.chiuchieh.rpc.spi.ExtensionLoader;
 import hwang.chiuchieh.rpc.util.CollectionUtils;
@@ -61,7 +60,8 @@ public class ServiceConfig<T> {
     /**
      * 代理工厂
      */
-    private static ProxyFactory PROXY_FACTORY = new CchProxyFactory();
+    private static ProxyFactory PROXY_FACTORY =
+            ExtensionLoader.getExtesionLoader(ProxyFactory.class).getAdaptiveExtension();
 
     /**
      * 服务导出入口
@@ -82,7 +82,7 @@ public class ServiceConfig<T> {
         Info info = generateInfo();
 
         //生成代理类
-        Invoker<T> invoker = PROXY_FACTORY.getInvoker(interfaceName, ref);
+        Invoker<T> invoker = PROXY_FACTORY.getInvoker(interfaceName, ref, info);
 
         //进行服务导出
         PROTOCOL.export(invoker, info);
@@ -168,6 +168,7 @@ public class ServiceConfig<T> {
 
         //填充SPI路由信息
         info.put(Info.SPI_PROTOCOL, protocolConfig.getName());
+        info.put(Info.SPI_PROXY_FACTORY, protocolConfig.getName());
         info.put(Info.SPI_REGISTRY, registryConfig.getName());
 
         return info;
