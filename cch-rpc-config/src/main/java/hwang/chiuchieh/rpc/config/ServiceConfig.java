@@ -147,7 +147,6 @@ public class ServiceConfig<T> {
     }
 
     private Info generateInfo() {
-
         String host;
         try {
             //获取本地IP
@@ -164,6 +163,7 @@ public class ServiceConfig<T> {
         info.setHost(host);
         info.setPort(port);
         info.setPath(path);
+        info.setServiceName(interfaceName);
         info.setRegistries(new ArrayList<>(registries));
 
         //填充SPI路由信息
@@ -178,11 +178,11 @@ public class ServiceConfig<T> {
         if (registryConfig == null) {
             return registries;
         }
-        if (StringUtils.isNotBlank(registryConfig.getName())
+        if (StringUtils.isNotBlank(registryConfig.getHost())
                 && StringUtils.isNotBlank(registryConfig.getPort())) {
-            registries.add(registryConfig.getName()
+            registries.add(registryConfig.getHost()
                     + RegistryConfig.HOST_NAME_SEPARATOR
-                    + registryConfig.getHost());
+                    + registryConfig.getPort());
         }
         String addresses = registryConfig.getAddresses();
         if (StringUtils.isNotBlank(addresses)) {
@@ -195,5 +195,4 @@ public class ServiceConfig<T> {
         }
         return registries;
     }
-
 }
