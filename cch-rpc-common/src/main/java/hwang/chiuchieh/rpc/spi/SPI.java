@@ -1,4 +1,4 @@
-package hwang.chiuchieh.rpc.api;
+package hwang.chiuchieh.rpc.spi;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

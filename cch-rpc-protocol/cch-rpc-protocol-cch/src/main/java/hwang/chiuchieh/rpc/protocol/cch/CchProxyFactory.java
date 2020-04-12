@@ -1,7 +1,7 @@
 package hwang.chiuchieh.rpc.protocol.cch;
 
-import hwang.chiuchieh.rpc.api.Info;
-import hwang.chiuchieh.rpc.api.Invoker;
+import hwang.chiuchieh.rpc.Invoker;
+import hwang.chiuchieh.rpc.spi.SPIExt;
 import hwang.chiuchieh.rpc.protocol.api.ProxyFactory;
 
 import java.lang.reflect.InvocationHandler;
@@ -9,13 +9,15 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 public class CchProxyFactory implements ProxyFactory {
+
+
     @Override
-    public <T> Invoker<T> getInvoker(String interfaceName, T instance, Info info) {
+    public <T> Invoker<T> getProxy(String interfaceName, T instance, SPIExt spiExt) {
         CchInvocationHandler handler = new CchInvocationHandler(instance);
         T serverStub = (T) Proxy.newProxyInstance(instance.getClass().getClassLoader(),
                 instance.getClass().getInterfaces(), handler);
 
-        CchInvoker<T> invoker = new CchInvoker<>();
+        Invoker<T> invoker = new Invoker<>();
         invoker.setInterfaceName(interfaceName);
         invoker.setProxy(serverStub);
 
@@ -35,4 +37,5 @@ public class CchProxyFactory implements ProxyFactory {
             return method.invoke(subject, args);
         }
     }
+
 }

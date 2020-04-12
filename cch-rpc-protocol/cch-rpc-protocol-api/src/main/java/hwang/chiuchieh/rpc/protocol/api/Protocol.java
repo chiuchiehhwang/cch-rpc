@@ -1,8 +1,8 @@
 package hwang.chiuchieh.rpc.protocol.api;
 
-import hwang.chiuchieh.rpc.api.Info;
-import hwang.chiuchieh.rpc.api.Invoker;
-import hwang.chiuchieh.rpc.api.SPI;
+import hwang.chiuchieh.rpc.Provider;
+import hwang.chiuchieh.rpc.spi.SPI;
+import hwang.chiuchieh.rpc.spi.SPIExt;
 
 /**
  * 协议接口
@@ -10,5 +10,5 @@ import hwang.chiuchieh.rpc.api.SPI;
  */
 @SPI("cch")
 public interface Protocol {
-    void export(Invoker invoker, Info info);
+    void export(Provider provider, SPIExt spiExt);
 }

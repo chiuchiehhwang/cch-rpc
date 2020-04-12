@@ -1,6 +1,6 @@
-package hwang.chiuchieh.rpc.spi;
+package hwang.chiuchieh.rpc.config;
 
-import hwang.chiuchieh.rpc.api.Info;
+import hwang.chiuchieh.rpc.spi.SPIExt;
 import hwang.chiuchieh.rpc.test.api.SPITest;
 import org.junit.Test;
 
@@ -25,9 +25,9 @@ public class ExtensionLoaderTest {
         //测试自适应拓展机制
         ExtensionLoader<SPITest> extensionLoader = ExtensionLoader.getExtesionLoader(SPITest.class);
         SPITest testObj = extensionLoader.getAdaptiveExtension();
-        Info Info = new Info();
-        Info.put("extensionSPITest", "spi-test2");
-        String result = testObj.testMethod(Info);
+        SPIExt spiExt = new SPIExt();
+        spiExt.put("extensionSPITest", "spi-test2");
+        String result = testObj.testMethod(spiExt);
         System.out.println(result);
     }
 }

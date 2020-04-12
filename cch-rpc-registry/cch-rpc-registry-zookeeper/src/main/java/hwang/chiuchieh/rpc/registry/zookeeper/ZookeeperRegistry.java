@@ -1,6 +1,7 @@
 package hwang.chiuchieh.rpc.registry.zookeeper;
 
-import hwang.chiuchieh.rpc.api.Info;
+import hwang.chiuchieh.rpc.Provider;
+import hwang.chiuchieh.rpc.spi.SPIExt;
 import hwang.chiuchieh.rpc.exceptions.CchRpcException;
 import hwang.chiuchieh.rpc.registry.api.Registry;
 import org.apache.curator.RetryPolicy;
@@ -8,6 +9,8 @@ import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.apache.zookeeper.CreateMode;
+
+import java.util.List;
 
 public class ZookeeperRegistry implements Registry {
 
@@ -23,17 +26,17 @@ public class ZookeeperRegistry implements Registry {
 
 
     @Override
-    public void registry(Info info) {
+    public void registry(Provider provider, SPIExt spiExt) {
         if(client == null) {
             synchronized (this) {
                 if (client == null) {
-                    buildAndStartClient(info);
+                    buildAndStartClient(provider);
                 }
             }
         }
         try {
-            String path = PATH_SEPARATOR + info.getServiceName()
-                    + PATH_SEPARATOR + info.getHost() + ":" + info.getPort();
+            String path = PATH_SEPARATOR + provider.getInterfaceName()
+                    + PATH_SEPARATOR + provider.getHost() + ":" + provider.getPort();
             client.create()
                     .creatingParentContainersIfNeeded()
                     .withMode(CreateMode.EPHEMERAL)
@@ -43,11 +46,12 @@ public class ZookeeperRegistry implements Registry {
         }
     }
 
-    private void buildAndStartClient(Info info) {
+    private void buildAndStartClient(Provider provider) {
         RetryPolicy retryPolicy = new ExponentialBackoffRetry(1000, 3);
         boolean isStart = true;
         String address = "";
-        for (String addr : info.getRegistries()) {
+        List<String> registries = provider.getRegistries();
+        for (String addr : registries) {
             if (isStart) {
                 address = address + addr;
                 isStart = false;

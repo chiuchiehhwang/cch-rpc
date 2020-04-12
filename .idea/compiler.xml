@@ -12,7 +12,6 @@
         <module name="cch-rpc-test-api" />
         <module name="cch-rpc-protocol-api" />
         <module name="cch-rpc-common" />
-        <module name="cch-rpc-api" />
         <module name="cch-rpc-remoting" />
         <module name="cch-rpc-registry-zookeeper" />
         <module name="cch-rpc-test-moudle" />
@@ -21,6 +20,8 @@
         <module name="cch-rpc-protocol-cch" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="11">
+      <module name="cch-rpc-api" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

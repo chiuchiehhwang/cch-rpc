@@ -1,9 +1,10 @@
 package hwang.chiuchieh.rpc.test.api;
 
-import hwang.chiuchieh.rpc.api.Info;
-import hwang.chiuchieh.rpc.api.SPI;
+
+import hwang.chiuchieh.rpc.spi.SPI;
+import hwang.chiuchieh.rpc.spi.SPIExt;
 
 @SPI("spi-test")
 public interface SPITest {
-    String testMethod(Info Info);
+    String testMethod(SPIExt spiExt);
 }

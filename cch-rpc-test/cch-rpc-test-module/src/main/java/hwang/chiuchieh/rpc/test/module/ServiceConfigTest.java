@@ -1,9 +1,6 @@
 package hwang.chiuchieh.rpc.test.module;
 
-import hwang.chiuchieh.rpc.config.ApplicationConfig;
-import hwang.chiuchieh.rpc.config.ProtocolConfig;
-import hwang.chiuchieh.rpc.config.RegistryConfig;
-import hwang.chiuchieh.rpc.config.ServiceConfig;
+import hwang.chiuchieh.rpc.config.*;
 import org.junit.Test;
 
 public class ServiceConfigTest {
@@ -22,7 +19,7 @@ public class ServiceConfigTest {
         registryConfig.setHost("127.0.0.1");
         registryConfig.setPort("2334");
 
-        ServiceConfig<TestService> serviceConfig = new ServiceConfig<>();
+        ServiceBean<TestService> serviceConfig = new ServiceBean<>();
         serviceConfig.setInterfaceName("hwang.chiuchieh.rpc.test.module.TestService");
         serviceConfig.setRef(new TestServiceImpl());
         serviceConfig.setApplicationConfig(applicationConfig);

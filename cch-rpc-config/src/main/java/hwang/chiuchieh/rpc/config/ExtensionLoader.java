@@ -1,7 +1,7 @@
-package hwang.chiuchieh.rpc.spi;
+package hwang.chiuchieh.rpc.config;
 
-import hwang.chiuchieh.rpc.api.Info;
-import hwang.chiuchieh.rpc.api.SPI;
+import hwang.chiuchieh.rpc.spi.SPI;
+import hwang.chiuchieh.rpc.spi.SPIExt;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -162,11 +162,11 @@ public class ExtensionLoader<T> {
         @Override
         public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
             boolean isTarget = false;
-            Info Info = null;
+            SPIExt spiExt = null;
             for (Object arg : args) {
-                if(arg instanceof Info) {
+                if(arg instanceof SPIExt) {
                     isTarget = true;
-                    Info = (Info) arg;
+                    spiExt = (SPIExt) arg;
                     break;
                 }
             }
@@ -174,7 +174,7 @@ public class ExtensionLoader<T> {
                 return null;
             }
             String extensionKey = "extension" + type.getSimpleName();
-            String name = Info.get(extensionKey);
+            String name = spiExt.get(extensionKey);
             ExtensionLoader<T> extensionLoader = ExtensionLoader.getExtesionLoader(type);
             T subject = extensionLoader.getExtension(name);
             Object result = method.invoke(subject, args);

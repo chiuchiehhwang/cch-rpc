@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cch-rpc-test-moudle</artifactId>
+    <artifactId>cch-rpc-test-module</artifactId>
 
     <dependencies>
         <dependency>

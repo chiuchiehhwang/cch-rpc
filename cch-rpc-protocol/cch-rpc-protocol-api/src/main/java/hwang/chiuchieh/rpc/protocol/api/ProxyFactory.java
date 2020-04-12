@@ -1,8 +1,10 @@
 package hwang.chiuchieh.rpc.protocol.api;
 
-import hwang.chiuchieh.rpc.api.Info;
-import hwang.chiuchieh.rpc.api.Invoker;
+
+import hwang.chiuchieh.rpc.Invoker;
+import hwang.chiuchieh.rpc.spi.SPIExt;
 
 public interface ProxyFactory {
-    <T> Invoker<T> getInvoker(String interfaceName, T instance, Info info);
+
+    <T> Invoker<T> getProxy(String interfaceName, T instance, SPIExt spiExt);
 }

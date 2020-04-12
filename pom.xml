@@ -11,7 +11,6 @@
     <modules>
         <module>cch-rpc-common</module>
         <module>cch-rpc-test</module>
-        <module>cch-rpc-api</module>
         <module>cch-rpc-config</module>
         <module>cch-rpc-registry</module>
         <module>cch-rpc-protocol</module>
