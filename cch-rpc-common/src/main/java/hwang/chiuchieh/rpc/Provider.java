@@ -12,8 +12,6 @@ import java.util.List;
 @Data
 public class Provider<T> {
 
-    public final static String PATH_SEPARATOR = "/";
-
     private String protocol;
 
     private String host;

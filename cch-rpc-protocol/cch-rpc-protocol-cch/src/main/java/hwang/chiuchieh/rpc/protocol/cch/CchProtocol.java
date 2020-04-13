@@ -1,10 +1,13 @@
 package hwang.chiuchieh.rpc.protocol.cch;
 
+import hwang.chiuchieh.rpc.Invoker;
 import hwang.chiuchieh.rpc.Provider;
+import hwang.chiuchieh.rpc.RemoteInfo;
 import hwang.chiuchieh.rpc.spi.SPIExt;
 import hwang.chiuchieh.rpc.protocol.api.AbstractProtocol;
 import hwang.chiuchieh.rpc.remoting.netty.NettyServer;
 
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -21,5 +24,10 @@ public class CchProtocol extends AbstractProtocol {
         if (existProvider == null) {
             providerMap.putIfAbsent(provider.getInterfaceName(), provider);
         }
+    }
+
+    @Override
+    public Object refer(Invoker invoker, List<RemoteInfo> remoteInfos, SPIExt spiExt) {
+        return null;
     }
 }

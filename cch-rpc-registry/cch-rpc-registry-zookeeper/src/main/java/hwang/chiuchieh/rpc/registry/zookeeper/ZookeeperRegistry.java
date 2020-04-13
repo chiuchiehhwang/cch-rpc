@@ -1,6 +1,8 @@
 package hwang.chiuchieh.rpc.registry.zookeeper;
 
+import hwang.chiuchieh.rpc.Invoker;
 import hwang.chiuchieh.rpc.Provider;
+import hwang.chiuchieh.rpc.RemoteInfo;
 import hwang.chiuchieh.rpc.spi.SPIExt;
 import hwang.chiuchieh.rpc.exceptions.CchRpcException;
 import hwang.chiuchieh.rpc.registry.api.Registry;
@@ -22,9 +24,6 @@ public class ZookeeperRegistry implements Registry {
 
     private volatile CuratorFramework client;
 
-
-
-
     @Override
     public void registry(Provider provider, SPIExt spiExt) {
         if(client == null) {
@@ -44,6 +43,11 @@ public class ZookeeperRegistry implements Registry {
         } catch (Exception e) {
             throw new CchRpcException(e);
         }
+    }
+
+    @Override
+    public List<RemoteInfo> getRemotes(Invoker invoker, SPIExt spiExt) {
+        return null;
     }
 
     private void buildAndStartClient(Provider provider) {

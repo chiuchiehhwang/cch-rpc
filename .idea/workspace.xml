@@ -2,42 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88de88a8-1ba3-4fa1-9da3-0bb8f6a2f500" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Provider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ServiceFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/RegistryInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/helper/ConfigHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-api/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-api/src/main/java/hwang/chiuchieh/rpc/api/AbstractInvoker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-api/src/main/java/hwang/chiuchieh/rpc/api/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/spi/SPIExt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-api/src/main/java/hwang/chiuchieh/rpc/api/Invoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Invoker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-api/src/main/java/hwang/chiuchieh/rpc/api/SPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/spi/SPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/spi/ExtensionLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/spi/ExtensionLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/test/java/hwang/chiuchieh/rpc/spi/ExtensionLoaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/test/java/hwang/chiuchieh/rpc/spi/ExtensionLoaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-config/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-config/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/config/ApplicationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ProtocolConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/config/ProtocolConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ReferenceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/config/ReferenceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/RegistryConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/config/RegistryConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ServiceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ServiceBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/config/ServiceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java/hwang/chiuchieh/rpc/protocol/api/AbstractProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java/hwang/chiuchieh/rpc/protocol/api/AbstractProtocol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java/hwang/chiuchieh/rpc/protocol/api/Protocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java/hwang/chiuchieh/rpc/protocol/api/Protocol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java/hwang/chiuchieh/rpc/protocol/api/ProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java/hwang/chiuchieh/rpc/protocol/api/ProxyFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CchInvoker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CchProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CchProtocol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CchProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CchProxyFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-api/src/main/java/hwang/chiuchieh/rpc/registry/api/Registry.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-api/src/main/java/hwang/chiuchieh/rpc/registry/api/Registry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-zookeeper/src/main/java/hwang/chiuchieh/rpc/registry/zookeeper/ZookeeperRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-zookeeper/src/main/java/hwang/chiuchieh/rpc/registry/zookeeper/ZookeeperRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-api/src/main/java/hwang/chiuchieh/rpc/test/api/SPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-api/src/main/java/hwang/chiuchieh/rpc/test/api/SPITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-spitest/src/main/java/hwang/chiuchieh/rpc/test/spitest/SPITestImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-spitest/src/main/java/hwang/chiuchieh/rpc/test/spitest/SPITestImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-spitest/src/main/java/hwang/chiuchieh/rpc/test/spitest/SPITestImpl2.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-spitest/src/main/java/hwang/chiuchieh/rpc/test/spitest/SPITestImpl2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-test/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-test/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Invoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Invoker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Provider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/config/ReferenceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/config/ReferenceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-config/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ExtensionLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/ExtensionLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ReferenceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/ReferenceBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ServiceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/ServiceBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/ServiceFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/spring/CchrpcBeanDefinitionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/spring/CchrpcBeanDefinitionParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/spring/CchrpcNamespaceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/spring/CchrpcNamespaceHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/resources/META-INF/cch-rpc.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/resources/META-INF/cch-rpc.xsd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/resources/META-INF/spring.handlers" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/resources/META-INF/spring.handlers" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/resources/META-INF/spring.schemas" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/resources/META-INF/spring.schemas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/test/java/hwang/chiuchieh/rpc/config/ExtensionLoaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/test/java/hwang/chiuchieh/rpc/config/ExtensionLoaderTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +123,7 @@
   <component name="RunManager" selected="Application.XmlConfigTest">
     <configuration name="XmlConfigTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hwang.chiuchieh.rpc.test.module.XmlConfigTest" />
-      <module name="cch-rpc-test-moudle" />
+      <module name="cch-rpc-test-module" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="hwang.chiuchieh.rpc.test.module.*" />
@@ -152,15 +135,15 @@
       </method>
     </configuration>
     <configuration name="ExtensionLoaderTest.getAdaptiveExtension" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cch-rpc-common" />
+      <module name="cch-rpc-core" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="api.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="hwang.chiuchieh.rpc.spi" />
-      <option name="MAIN_CLASS_NAME" value="hwang.chiuchieh.rpc.spi.ExtensionLoaderTest" />
+      <option name="PACKAGE_NAME" value="hwang.chiuchieh.rpc.config" />
+      <option name="MAIN_CLASS_NAME" value="hwang.chiuchieh.rpc.config.ExtensionLoaderTest" />
       <option name="METHOD_NAME" value="getAdaptiveExtension" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -168,15 +151,15 @@
       </method>
     </configuration>
     <configuration name="ExtensionLoaderTest.getExtension" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cch-rpc-common" />
+      <module name="cch-rpc-core" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="api.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="hwang.chiuchieh.rpc.spi" />
-      <option name="MAIN_CLASS_NAME" value="hwang.chiuchieh.rpc.spi.ExtensionLoaderTest" />
+      <option name="PACKAGE_NAME" value="hwang.chiuchieh.rpc.config" />
+      <option name="MAIN_CLASS_NAME" value="hwang.chiuchieh.rpc.config.ExtensionLoaderTest" />
       <option name="METHOD_NAME" value="getExtension" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -184,7 +167,7 @@
       </method>
     </configuration>
     <configuration name="ServiceConfigTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cch-rpc-test-moudle" />
+      <module name="cch-rpc-test-module" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="hwang.chiuchieh.rpc.test.module.*" />
@@ -199,7 +182,7 @@
       </method>
     </configuration>
     <configuration name="ServiceConfigTest.export" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cch-rpc-test-moudle" />
+      <module name="cch-rpc-test-module" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="hwang.chiuchieh.rpc.test.module.*" />
@@ -270,7 +253,8 @@
       <workItem from="1586010578737" duration="349000" />
       <workItem from="1586010953768" duration="29581000" />
       <workItem from="1586352220578" duration="3830000" />
-      <workItem from="1586683697909" duration="17208000" />
+      <workItem from="1586683697909" duration="17807000" />
+      <workItem from="1586740001171" duration="2266000" />
     </task>
     <servers />
   </component>
@@ -299,10 +283,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="204" y="346" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.864@0.0.1536.864" timestamp="1586695173228" />
-    <state x="296" y="268" width="944" height="339" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586704407874">
+    <state x="296" y="268" width="944" height="339" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1586707842249">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="296" y="268" width="944" height="339" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.864@0.0.1536.864" timestamp="1586704407874" />
+    <state x="296" y="268" width="944" height="339" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.864@0.0.1536.864" timestamp="1586707842249" />
     <state x="367" y="286" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1586695191174">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -319,22 +303,22 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="570" y="123" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1586097115300" />
-    <state width="1483" height="136" key="GridCell.Tab.0.bottom" timestamp="1586707242184">
+    <state width="1483" height="136" key="GridCell.Tab.0.bottom" timestamp="1586708183434">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1483" height="136" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586707242184" />
-    <state width="1483" height="136" key="GridCell.Tab.0.center" timestamp="1586707242183">
+    <state width="1483" height="136" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586708183434" />
+    <state width="1483" height="136" key="GridCell.Tab.0.center" timestamp="1586708183434">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1483" height="136" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1586707242183" />
-    <state width="1483" height="136" key="GridCell.Tab.0.left" timestamp="1586707242183">
+    <state width="1483" height="136" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1586708183434" />
+    <state width="1483" height="136" key="GridCell.Tab.0.left" timestamp="1586708183434">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1483" height="136" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1586707242183" />
-    <state width="1483" height="136" key="GridCell.Tab.0.right" timestamp="1586707242183">
+    <state width="1483" height="136" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1586708183434" />
+    <state width="1483" height="136" key="GridCell.Tab.0.right" timestamp="1586708183434">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1483" height="136" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1586707242183" />
+    <state width="1483" height="136" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1586708183434" />
     <state width="1483" height="332" key="GridCell.Tab.1.bottom" timestamp="1586222946844">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
