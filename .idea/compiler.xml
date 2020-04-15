@@ -11,12 +11,12 @@
         <module name="cch-rpc-common" />
         <module name="cch-rpc-protocol-api" />
         <module name="cch-rpc-test-api" />
-        <module name="cch-rpc-registry-api" />
         <module name="cch-rpc-remoting" />
-        <module name="cch-rpc-core" />
-        <module name="cch-rpc-protocol-cch" />
         <module name="cch-rpc-registry-zookeeper" />
+        <module name="cch-rpc-core" />
         <module name="cch-rpc-test-spitest" />
+        <module name="cch-rpc-registry-api" />
+        <module name="cch-rpc-protocol-cch" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">

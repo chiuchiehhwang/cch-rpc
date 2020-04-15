@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88de88a8-1ba3-4fa1-9da3-0bb8f6a2f500" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/RegistryInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/helper/ConfigHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Invoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Invoker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Provider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/config/ReferenceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/config/ReferenceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-config/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ExtensionLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/ExtensionLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ReferenceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/ReferenceBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ServiceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/ServiceBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/ServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/ServiceFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/spring/CchrpcBeanDefinitionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/spring/CchrpcBeanDefinitionParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/java/hwang/chiuchieh/rpc/config/spring/CchrpcNamespaceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/spring/CchrpcNamespaceHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/resources/META-INF/cch-rpc.xsd" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/resources/META-INF/cch-rpc.xsd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/resources/META-INF/spring.handlers" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/resources/META-INF/spring.handlers" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/main/resources/META-INF/spring.schemas" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/resources/META-INF/spring.schemas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-config/src/test/java/hwang/chiuchieh/rpc/config/ExtensionLoaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/test/java/hwang/chiuchieh/rpc/config/ExtensionLoaderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-api/src/main/java/hwang/chiuchieh/rpc/registry/api/Registry.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-api/src/main/java/hwang/chiuchieh/rpc/registry/api/Registry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-zookeeper/src/main/java/hwang/chiuchieh/rpc/registry/zookeeper/ZookeeperRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-zookeeper/src/main/java/hwang/chiuchieh/rpc/registry/zookeeper/ZookeeperRegistry.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,7 +240,8 @@
       <workItem from="1586010953768" duration="29581000" />
       <workItem from="1586352220578" duration="3830000" />
       <workItem from="1586683697909" duration="17807000" />
-      <workItem from="1586740001171" duration="2266000" />
+      <workItem from="1586740001171" duration="2935000" />
+      <workItem from="1586912276103" duration="3561000" />
     </task>
     <servers />
   </component>
@@ -275,10 +262,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="355" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1586160377417" />
-    <state x="530" y="75" key="#com.intellij.ide.util.MemberChooser" timestamp="1586145893968">
+    <state x="530" y="75" key="#com.intellij.ide.util.MemberChooser" timestamp="1586742801134">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="530" y="75" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1586145893968" />
+    <state x="530" y="75" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1586742801134" />
     <state x="204" y="346" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1586695173228">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -343,10 +330,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="242" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1586707386640" />
-    <state x="454" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1586352221149">
+    <state x="454" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1586912304843">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="454" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1586352221149" />
+    <state x="454" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1586912304843" />
     <state x="453" y="85" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1586095720093">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

@@ -3,20 +3,29 @@ package hwang.chiuchieh.rpc.registry.zookeeper;
 import hwang.chiuchieh.rpc.Invoker;
 import hwang.chiuchieh.rpc.Provider;
 import hwang.chiuchieh.rpc.RemoteInfo;
-import hwang.chiuchieh.rpc.spi.SPIExt;
 import hwang.chiuchieh.rpc.exceptions.CchRpcException;
 import hwang.chiuchieh.rpc.registry.api.Registry;
+import hwang.chiuchieh.rpc.spi.SPIExt;
+import hwang.chiuchieh.rpc.util.StringUtils;
 import org.apache.curator.RetryPolicy;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
+import org.apache.curator.framework.recipes.cache.PathChildrenCache;
+import org.apache.curator.framework.recipes.cache.PathChildrenCacheEvent;
+import org.apache.curator.framework.recipes.cache.PathChildrenCacheListener;
 import org.apache.curator.retry.ExponentialBackoffRetry;
 import org.apache.zookeeper.CreateMode;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ZookeeperRegistry implements Registry {
 
     private static final String PATH_SEPARATOR = "/";
+
+    private static final String PROVIDER_PATH = "providers";
+
+    private static final String INVOKER_PATH = "invokers";
 
     private static final String ADDRESS_SEPARATOR = ",";
 
@@ -25,16 +34,10 @@ public class ZookeeperRegistry implements Registry {
     private volatile CuratorFramework client;
 
     @Override
-    public void registry(Provider provider, SPIExt spiExt) {
-        if(client == null) {
-            synchronized (this) {
-                if (client == null) {
-                    buildAndStartClient(provider);
-                }
-            }
-        }
+    public <T> void registry(Provider<T> provider, SPIExt spiExt) {
         try {
-            String path = PATH_SEPARATOR + provider.getInterfaceName()
+            checkAndInitClient(provider.getRegistries());
+            String path = PATH_SEPARATOR + provider.getInterfaceName() + PATH_SEPARATOR + PROVIDER_PATH
                     + PATH_SEPARATOR + provider.getHost() + ":" + provider.getPort();
             client.create()
                     .creatingParentContainersIfNeeded()
@@ -46,15 +49,53 @@ public class ZookeeperRegistry implements Registry {
     }
 
     @Override
-    public List<RemoteInfo> getRemotes(Invoker invoker, SPIExt spiExt) {
-        return null;
+    public <T> List<RemoteInfo> getRemotes(Invoker<T> invoker, SPIExt spiExt) {
+        try {
+            checkAndInitClient(invoker.getRegistries());
+            String providerPath = PATH_SEPARATOR + invoker.getInterfaceName() + PATH_SEPARATOR + PROVIDER_PATH;
+            String invokerPath = PATH_SEPARATOR + invoker.getInterfaceName() + PATH_SEPARATOR + PROVIDER_PATH
+                    + PATH_SEPARATOR + invoker.getHost() + ":" + invoker.getPort();
+
+            List<RemoteInfo> remoteInfos = new ArrayList<>();
+            List<String> addresses = client.getChildren().forPath(providerPath);
+            for (String addr : addresses) {
+                if (StringUtils.isBlank(addr)) {
+                    continue;
+                }
+                String[] hostAndPort = addr.split(":");
+                if (hostAndPort == null || hostAndPort.length != 2) {
+                    continue;
+                }
+                String host = hostAndPort[0];
+                String port = hostAndPort[1];
+                if (StringUtils.isBlank(host) || StringUtils.isBlank(port)) {
+                    continue;
+                }
+                RemoteInfo remoteInfo = new RemoteInfo();
+                remoteInfo.setHost(host);
+                remoteInfo.setPort(port);
+                remoteInfos.add(remoteInfo);
+            }
+            return remoteInfos;
+        } catch (Exception e) {
+            throw new CchRpcException(e);
+        }
     }
 
-    private void buildAndStartClient(Provider provider) {
+    private void checkAndInitClient(List<String> registries) {
+        if(client == null) {
+                    synchronized (this) {
+                        if (client == null) {
+                            buildAndStartClient(registries);
+                        }
+            }
+        }
+    }
+
+    private void buildAndStartClient(List<String> registries) {
         RetryPolicy retryPolicy = new ExponentialBackoffRetry(1000, 3);
         boolean isStart = true;
         String address = "";
-        List<String> registries = provider.getRegistries();
         for (String addr : registries) {
             if (isStart) {
                 address = address + addr;
@@ -71,5 +112,20 @@ public class ZookeeperRegistry implements Registry {
                 .namespace(CCH_RPC_NAMESPACE)
                 .build();
         client.start();
+    }
+
+    private void addListener(String providerPath) {
+        try {
+            PathChildrenCache cache = new PathChildrenCache(client, providerPath, true);
+            cache.start(PathChildrenCache.StartMode.POST_INITIALIZED_EVENT);
+            cache.getListenable().addListener(new PathChildrenCacheListener() {
+                @Override
+                public void childEvent(CuratorFramework curatorFramework, PathChildrenCacheEvent pathChildrenCacheEvent) throws Exception {
+
+                }
+            });
+        }catch (Exception e) {
+            throw new CchRpcException(e);
+        }
     }
 }

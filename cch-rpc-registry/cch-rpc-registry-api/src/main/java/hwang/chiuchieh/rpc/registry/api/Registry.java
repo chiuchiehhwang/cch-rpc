@@ -12,7 +12,7 @@ import java.util.List;
 @SPI("zookeeper")
 public interface Registry {
 
-    void registry(Provider provider, SPIExt spiExt);
+    <T> void registry(Provider<T> provider, SPIExt spiExt);
 
-    List<RemoteInfo> getRemotes(Invoker invoker, SPIExt spiExt);
+    <T> List<RemoteInfo> getRemotes(Invoker<T> invoker, SPIExt spiExt);
 }

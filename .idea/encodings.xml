@@ -4,9 +4,9 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cch-rpc-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cch-rpc-common/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/cch-rpc-config" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/cch-rpc-config/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/cch-rpc-config/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cch-rpc-core/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cch-rpc-protocol" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java" charset="UTF-8" />
