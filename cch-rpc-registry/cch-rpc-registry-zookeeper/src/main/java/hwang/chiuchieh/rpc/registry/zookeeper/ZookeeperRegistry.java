@@ -18,6 +18,8 @@ import org.apache.zookeeper.CreateMode;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class ZookeeperRegistry implements Registry {
 
@@ -32,6 +34,8 @@ public class ZookeeperRegistry implements Registry {
     private static final String CCH_RPC_NAMESPACE = "cch-rpc";
 
     private volatile CuratorFramework client;
+
+    private static Map<String, List<RemoteInfo>> catalogCache = new ConcurrentHashMap<>();
 
     @Override
     public <T> void registry(Provider<T> provider, SPIExt spiExt) {
@@ -50,44 +54,26 @@ public class ZookeeperRegistry implements Registry {
 
     @Override
     public <T> List<RemoteInfo> getRemotes(Invoker<T> invoker, SPIExt spiExt) {
-        try {
-            checkAndInitClient(invoker.getRegistries());
-            String providerPath = PATH_SEPARATOR + invoker.getInterfaceName() + PATH_SEPARATOR + PROVIDER_PATH;
-            String invokerPath = PATH_SEPARATOR + invoker.getInterfaceName() + PATH_SEPARATOR + PROVIDER_PATH
-                    + PATH_SEPARATOR + invoker.getHost() + ":" + invoker.getPort();
+        checkAndInitClient(invoker.getRegistries());
+        String providerPath = PATH_SEPARATOR + invoker.getInterfaceName() + PATH_SEPARATOR + PROVIDER_PATH;
+        String invokerPath = PATH_SEPARATOR + invoker.getInterfaceName() + PATH_SEPARATOR + PROVIDER_PATH
+                + PATH_SEPARATOR + invoker.getHost() + ":" + invoker.getPort();
 
-            List<RemoteInfo> remoteInfos = new ArrayList<>();
-            List<String> addresses = client.getChildren().forPath(providerPath);
-            for (String addr : addresses) {
-                if (StringUtils.isBlank(addr)) {
-                    continue;
-                }
-                String[] hostAndPort = addr.split(":");
-                if (hostAndPort == null || hostAndPort.length != 2) {
-                    continue;
-                }
-                String host = hostAndPort[0];
-                String port = hostAndPort[1];
-                if (StringUtils.isBlank(host) || StringUtils.isBlank(port)) {
-                    continue;
-                }
-                RemoteInfo remoteInfo = new RemoteInfo();
-                remoteInfo.setHost(host);
-                remoteInfo.setPort(port);
-                remoteInfos.add(remoteInfo);
-            }
-            return remoteInfos;
-        } catch (Exception e) {
-            throw new CchRpcException(e);
+        //从本地缓存中读取
+        if (catalogCache.get(providerPath) != null) {
+            return catalogCache.get(providerPath);
         }
+        List<RemoteInfo> remoteInfos = getRemoteInfos(providerPath);
+        catalogCache.putIfAbsent(providerPath, remoteInfos);
+        return catalogCache.get(providerPath);
     }
 
     private void checkAndInitClient(List<String> registries) {
-        if(client == null) {
-                    synchronized (this) {
-                        if (client == null) {
-                            buildAndStartClient(registries);
-                        }
+        if (client == null) {
+            synchronized (this) {
+                if (client == null) {
+                    buildAndStartClient(registries);
+                }
             }
         }
     }
@@ -121,10 +107,50 @@ public class ZookeeperRegistry implements Registry {
             cache.getListenable().addListener(new PathChildrenCacheListener() {
                 @Override
                 public void childEvent(CuratorFramework curatorFramework, PathChildrenCacheEvent pathChildrenCacheEvent) throws Exception {
-
+                    switch (pathChildrenCacheEvent.getType()) {
+                        case CHILD_ADDED:
+                            handleUpdate(providerPath);
+                            break;
+                        case CHILD_REMOVED:
+                            handleUpdate(providerPath);
+                            break;
+                    }
                 }
             });
-        }catch (Exception e) {
+        } catch (Exception e) {
+            throw new CchRpcException(e);
+        }
+    }
+
+    private void handleUpdate(String providerPath) {
+        List<RemoteInfo> remoteInfos = getRemoteInfos(providerPath);
+        catalogCache.put(providerPath, remoteInfos);
+    }
+
+    private List<RemoteInfo> getRemoteInfos(String providerPath) {
+        try {
+            List<RemoteInfo> remoteInfos = new ArrayList<>();
+            List<String> addresses = client.getChildren().forPath(providerPath);
+            for (String addr : addresses) {
+                if (StringUtils.isBlank(addr)) {
+                    continue;
+                }
+                String[] hostAndPort = addr.split(":");
+                if (hostAndPort == null || hostAndPort.length != 2) {
+                    continue;
+                }
+                String host = hostAndPort[0];
+                String port = hostAndPort[1];
+                if (StringUtils.isBlank(host) || StringUtils.isBlank(port)) {
+                    continue;
+                }
+                RemoteInfo remoteInfo = new RemoteInfo();
+                remoteInfo.setHost(host);
+                remoteInfo.setPort(port);
+                remoteInfos.add(remoteInfo);
+            }
+            return remoteInfos;
+        } catch (Exception e) {
             throw new CchRpcException(e);
         }
     }
