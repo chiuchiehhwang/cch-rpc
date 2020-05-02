@@ -8,11 +8,13 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import lombok.extern.slf4j.Slf4j;
 
 import java.net.InetSocketAddress;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+@Slf4j
 public class NettyServer extends AbstractServer {
 
     ServerHandler handler = new ServerHandler();
@@ -52,7 +54,7 @@ public class NettyServer extends AbstractServer {
                 return true;
             }
         } catch (InterruptedException e) {
-            //TODO 打日志
+            log.error("等待Netty服务器启动过程中被中断");
         }
         return false;
     }

@@ -13,12 +13,12 @@ public class ProtocolConfig {
     public static String DEFAULT_PROTOCOL_PORT = "2333";
 
     /**
-     * 协议名称，默认为cch协议
+     * 协议名称，可为空，默认为cch协议
      */
     private String name;
 
     /**
-     * 服务暴露端口
+     * 服务暴露端口，可为空，默认为2333
      */
     private String port;
 

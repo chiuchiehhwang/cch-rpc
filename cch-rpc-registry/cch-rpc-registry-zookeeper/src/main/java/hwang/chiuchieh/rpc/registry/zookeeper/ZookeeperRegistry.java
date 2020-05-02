@@ -56,8 +56,8 @@ public class ZookeeperRegistry implements Registry {
     public <T> List<RemoteInfo> getRemotes(Invoker<T> invoker, SPIExt spiExt) {
         checkAndInitClient(invoker.getRegistries());
         String providerPath = PATH_SEPARATOR + invoker.getInterfaceName() + PATH_SEPARATOR + PROVIDER_PATH;
-        String invokerPath = PATH_SEPARATOR + invoker.getInterfaceName() + PATH_SEPARATOR + PROVIDER_PATH
-                + PATH_SEPARATOR + invoker.getHost() + ":" + invoker.getPort();
+//        String invokerPath = PATH_SEPARATOR + invoker.getInterfaceName() + PATH_SEPARATOR + PROVIDER_PATH
+//                + PATH_SEPARATOR + invoker.getHost() + ":" + invoker.getPort();
 
         //从本地缓存中读取
         if (catalogCache.get(providerPath) != null) {

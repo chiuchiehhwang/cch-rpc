@@ -17,7 +17,6 @@ public class ServerMessageDecoder extends ReplayingDecoder<Void> {
     protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
         short magicNum = in.readShort();
         if (magicNum != 0xcce3) {
-            //TODO
             throw new MagicIncorrectException();
         }
         byte msgTypeAndSerialization = in.readByte();

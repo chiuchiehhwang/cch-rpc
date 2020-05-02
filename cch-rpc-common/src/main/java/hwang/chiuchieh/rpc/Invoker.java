@@ -1,5 +1,7 @@
 package hwang.chiuchieh.rpc;
 
+import hwang.chiuchieh.rpc.config.ProtocolConfig;
+import hwang.chiuchieh.rpc.config.RegistryConfig;
 import lombok.Data;
 
 import java.util.List;
@@ -13,24 +15,33 @@ import java.util.List;
 @Data
 public class Invoker<T> {
 
-    private String protocol;
-
-    private String host;
-
-    private String port;
-
-    private String serviceName;
-
     /**
-     * 注册中心，如zookeeper
+     * 协议类型，如cch
      */
-    private String registry;
+    private String protocol = ProtocolConfig.DEFAULT_PROTOCOL;
+
     /**
-     * host:port
+     * 引入的服务
+     */
+    private String interfaceName;
+
+    /**
+     * 引入的服务类型
+     */
+    private Class<T> clazz;
+
+    /**
+     * 注册中心类型，如zookeeper
+     */
+    private String registry = RegistryConfig.DEFAULT_REGISTRY;
+
+    /**
+     * 注册中心地址, host:port
      */
     private List<String> registries;
 
-    protected T proxy;
-
-    protected String interfaceName;
+    /**
+     * 应用名
+     */
+    private String serviceName;
 }

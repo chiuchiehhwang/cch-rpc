@@ -20,7 +20,7 @@ public class RegistryConfig {
     public static String ADDRESS_SEPARATOR = ",";
 
     /**
-     * 注册中心协议名称，默认为zookeeper协议
+     * 注册中心协议名称，可为空，默认为zookeeper协议
      */
     private String name;
 
@@ -37,6 +37,7 @@ public class RegistryConfig {
     /**
      * 注册中心List，如果配置多个地址则需要使用该参数配置注册中心地址。
      * address中的地址使用英文逗号分隔，和host:port的配置取并集。
+     * 地址取并集后不能为空
      * 配置示例：
      * 192.168.0.3:8888,192.168.0.4:8888
      */

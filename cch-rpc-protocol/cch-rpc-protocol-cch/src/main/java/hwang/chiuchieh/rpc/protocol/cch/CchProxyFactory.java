@@ -1,8 +1,8 @@
 package hwang.chiuchieh.rpc.protocol.cch;
 
 import hwang.chiuchieh.rpc.Invoker;
-import hwang.chiuchieh.rpc.spi.SPIExt;
 import hwang.chiuchieh.rpc.protocol.api.ProxyFactory;
+import hwang.chiuchieh.rpc.spi.SPIExt;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -12,29 +12,27 @@ public class CchProxyFactory implements ProxyFactory {
 
 
     @Override
-    public <T> Invoker<T> getProxy(String interfaceName, T instance, SPIExt spiExt) {
-        CchInvocationHandler handler = new CchInvocationHandler(instance);
-        T serverStub = (T) Proxy.newProxyInstance(instance.getClass().getClassLoader(),
-                instance.getClass().getInterfaces(), handler);
+    public <T> T getProxy(Invoker<T> invoker, SPIExt spiExt) {
+        CchInvocationHandler<T> handler = new CchInvocationHandler<>(invoker);
+        Object serverStub = Proxy.newProxyInstance(invoker.getClazz().getClassLoader(),
+                invoker.getClazz().getInterfaces(), handler);
 
-        Invoker<T> invoker = new Invoker<>();
-        invoker.setInterfaceName(interfaceName);
-        invoker.setProxy(serverStub);
-
-        return invoker;
+        return (T) serverStub;
     }
 
-    class CchInvocationHandler implements InvocationHandler{
+    private static class CchInvocationHandler<T> implements InvocationHandler {
 
-        private Object subject;
+        private CallHandler callHandler = new CallHandler();
 
-        public CchInvocationHandler(Object subject) {
-            this.subject = subject;
+        private Invoker<T> invoker;
+
+        public CchInvocationHandler(Invoker<T> invoker) {
+            this.invoker = invoker;
         }
 
         @Override
         public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-            return method.invoke(subject, args);
+            return callHandler.call(invoker, method, args);
         }
     }
 

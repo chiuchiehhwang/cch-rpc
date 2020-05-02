@@ -9,7 +9,7 @@ import lombok.Data;
 public class ApplicationConfig {
 
     /**
-     * 应用名称，作为应用的唯一标识
+     * 应用名称，作为应用的唯一标识, 必填
      */
     private String name;
 

@@ -1,7 +1,4 @@
-package hwang.chiuchieh.rpc.config;
-
-import hwang.chiuchieh.rpc.spi.SPI;
-import hwang.chiuchieh.rpc.spi.SPIExt;
+package hwang.chiuchieh.rpc.spi;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

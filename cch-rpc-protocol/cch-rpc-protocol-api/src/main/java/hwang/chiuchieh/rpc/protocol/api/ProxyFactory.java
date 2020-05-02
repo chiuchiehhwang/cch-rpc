@@ -6,5 +6,5 @@ import hwang.chiuchieh.rpc.spi.SPIExt;
 
 public interface ProxyFactory {
 
-    <T> Invoker<T> getProxy(String interfaceName, T instance, SPIExt spiExt);
+    <T> T getProxy(Invoker<T> invoker, SPIExt spiExt);
 }

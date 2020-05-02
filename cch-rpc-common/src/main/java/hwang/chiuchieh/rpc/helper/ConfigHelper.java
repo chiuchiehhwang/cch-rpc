@@ -13,22 +13,22 @@ import java.util.Set;
 public class ConfigHelper {
 
     public static void checkApplicationConfig(ApplicationConfig applicationConfig) {
-        if(applicationConfig == null) {
+        if (applicationConfig == null) {
             throw new CchRpcException("no application's configuration");
         }
-        if(StringUtils.isBlank(applicationConfig.getName())) {
+        if (StringUtils.isBlank(applicationConfig.getName())) {
             throw new CchRpcException("application name is blank");
         }
     }
 
     public static void checkProtocolConfig(ProtocolConfig protocolConfig) {
-        if(protocolConfig == null) {
-            protocolConfig = new ProtocolConfig();
+        if (protocolConfig == null) {
+            throw new CchRpcException("no protocol's configuration");
         }
-        if(StringUtils.isBlank(protocolConfig.getName())) {
+        if (StringUtils.isBlank(protocolConfig.getName())) {
             protocolConfig.setName(ProtocolConfig.DEFAULT_PROTOCOL);
         }
-        if(StringUtils.isBlank(protocolConfig.getPort())) {
+        if (StringUtils.isBlank(protocolConfig.getPort())) {
             protocolConfig.setPort(ProtocolConfig.DEFAULT_PROTOCOL_PORT);
         } else {
             try {
@@ -43,10 +43,10 @@ public class ConfigHelper {
     }
 
     public static void checkRegistryConfig(RegistryConfig registryConfig) {
-        if(registryConfig == null) {
+        if (registryConfig == null) {
             throw new CchRpcException("no registry's configuration");
         }
-        if(StringUtils.isBlank(registryConfig.getName())) {
+        if (StringUtils.isBlank(registryConfig.getName())) {
             registryConfig.setName(RegistryConfig.DEFAULT_REGISTRY);
         }
         Set<String> registries = getRegistries(registryConfig);

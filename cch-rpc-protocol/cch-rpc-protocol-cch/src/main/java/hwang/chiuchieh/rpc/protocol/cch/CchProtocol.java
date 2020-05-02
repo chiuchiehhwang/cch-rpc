@@ -2,12 +2,12 @@ package hwang.chiuchieh.rpc.protocol.cch;
 
 import hwang.chiuchieh.rpc.Invoker;
 import hwang.chiuchieh.rpc.Provider;
-import hwang.chiuchieh.rpc.RemoteInfo;
-import hwang.chiuchieh.rpc.spi.SPIExt;
 import hwang.chiuchieh.rpc.protocol.api.AbstractProtocol;
+import hwang.chiuchieh.rpc.protocol.api.ProxyFactory;
 import hwang.chiuchieh.rpc.remoting.netty.NettyServer;
+import hwang.chiuchieh.rpc.spi.ExtensionLoader;
+import hwang.chiuchieh.rpc.spi.SPIExt;
 
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -15,6 +15,12 @@ import java.util.concurrent.ConcurrentHashMap;
 public class CchProtocol extends AbstractProtocol {
 
     protected static Map<String, Provider> providerMap = new ConcurrentHashMap<>();
+
+    /**
+     * 代理工厂
+     */
+    private static ProxyFactory PROXY_FACTORY =
+            ExtensionLoader.getExtesionLoader(ProxyFactory.class).getAdaptiveExtension();
 
     @Override
     public void export(Provider provider, SPIExt spiExt) {
@@ -27,7 +33,9 @@ public class CchProtocol extends AbstractProtocol {
     }
 
     @Override
-    public Object refer(Invoker invoker, List<RemoteInfo> remoteInfos, SPIExt spiExt) {
-        return null;
+    public <T> T refer(Invoker<T> invoker, SPIExt spiExt) {
+        spiExt.put(SPIExt.SPI_PROXY_FACTORY, invoker.getProtocol());
+
+        return PROXY_FACTORY.getProxy(invoker, spiExt);
     }
 }
