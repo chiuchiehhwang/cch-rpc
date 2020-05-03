@@ -34,8 +34,6 @@ public class CchProtocol extends AbstractProtocol {
 
     @Override
     public <T> T refer(Invoker<T> invoker, SPIExt spiExt) {
-        spiExt.put(SPIExt.SPI_PROXY_FACTORY, invoker.getProtocol());
-
         return PROXY_FACTORY.getProxy(invoker, spiExt);
     }
 }

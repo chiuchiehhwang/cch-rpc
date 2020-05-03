@@ -2,14 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88de88a8-1ba3-4fa1-9da3-0bb8f6a2f500" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/util/IPUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/resources/META-INF/cch-rpc/hwang.chiuchieh.rpc.protocol.api.Cluster" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/resources/META-INF/cch-rpc/hwang.chiuchieh.rpc.protocol.cch.api.LoadBalance" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Invocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Invocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Invoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Invoker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/RemoteInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/RemoteInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java/hwang/chiuchieh/rpc/protocol/api/LoadBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java/hwang/chiuchieh/rpc/protocol/api/LoadBalance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Provider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java/hwang/chiuchieh/rpc/protocol/api/ProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java/hwang/chiuchieh/rpc/protocol/api/ProxyFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CallHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CallHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CchProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CchProtocol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CchProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/proxy/JdkProxyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/cluster/FailoverCluster.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/cluster/FailoverCluster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/filter/CallProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/processor/CallProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/filter/ClusterProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/processor/ClusterProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/loadbalance/ConsistentHashLoadBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/loadbalance/ConsistentHashLoadBalance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/resources/META-INF/cch-rpc/hwang.chiuchieh.rpc.protocol.api.ProxyFactory" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/resources/META-INF/cch-rpc/hwang.chiuchieh.rpc.protocol.api.ProxyFactory" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-zookeeper/src/main/java/hwang/chiuchieh/rpc/registry/zookeeper/ZookeeperRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-zookeeper/src/main/java/hwang/chiuchieh/rpc/registry/zookeeper/ZookeeperRegistry.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,11 +38,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>newInstance</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -115,7 +118,7 @@
       <module name="cch-rpc-protocol-cch" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="hwang.chiuchieh.rpc.protocol.cch.*" />
+          <option name="PATTERN" value="hwang.chiuchieh.rpc.protocol.cch.proxy.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -246,7 +249,7 @@
       <workItem from="1587000478460" duration="1832000" />
       <workItem from="1587195175327" duration="11270000" />
       <workItem from="1588386213876" duration="26871000" />
-      <workItem from="1588481422414" duration="13841000" />
+      <workItem from="1588481422414" duration="18336000" />
     </task>
     <servers />
   </component>
@@ -254,10 +257,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="355" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586160377417">
+    <state x="355" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588505913368">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="355" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1586160377417" />
+    <state x="355" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1588505913368" />
     <state x="530" y="75" key="#com.intellij.ide.util.MemberChooser" timestamp="1588487106786">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -334,10 +337,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="453" y="85" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.864@0.0.1536.864" timestamp="1586095720093" />
-    <state x="347" y="0" width="840" height="862" key="search.everywhere.popup" timestamp="1588427217252">
+    <state x="347" y="0" width="840" height="862" key="search.everywhere.popup" timestamp="1588506154689">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="347" y="0" width="840" height="862" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1588427217252" />
+    <state x="347" y="0" width="840" height="862" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1588506154689" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

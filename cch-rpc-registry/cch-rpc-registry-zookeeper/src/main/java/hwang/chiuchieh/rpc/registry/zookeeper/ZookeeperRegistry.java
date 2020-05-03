@@ -27,8 +27,6 @@ public class ZookeeperRegistry implements Registry {
 
     private static final String PROVIDER_PATH = "providers";
 
-    private static final String INVOKER_PATH = "invokers";
-
     private static final String ADDRESS_SEPARATOR = ",";
 
     private static final String CCH_RPC_NAMESPACE = "cch-rpc";
@@ -56,8 +54,8 @@ public class ZookeeperRegistry implements Registry {
     public <T> List<RemoteInfo> getRemotes(Invoker<T> invoker, SPIExt spiExt) {
         checkAndInitClient(invoker.getRegistries());
         String providerPath = PATH_SEPARATOR + invoker.getInterfaceName() + PATH_SEPARATOR + PROVIDER_PATH;
-//        String invokerPath = PATH_SEPARATOR + invoker.getInterfaceName() + PATH_SEPARATOR + PROVIDER_PATH
-//                + PATH_SEPARATOR + invoker.getHost() + ":" + invoker.getPort();
+
+        addListener(providerPath);
 
         //从本地缓存中读取
         if (catalogCache.get(providerPath) != null) {

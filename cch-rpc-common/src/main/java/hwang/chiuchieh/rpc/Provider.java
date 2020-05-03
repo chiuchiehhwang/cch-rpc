@@ -3,6 +3,7 @@ package hwang.chiuchieh.rpc;
 import hwang.chiuchieh.rpc.config.ProtocolConfig;
 import hwang.chiuchieh.rpc.config.RegistryConfig;
 import hwang.chiuchieh.rpc.exceptions.CchRpcException;
+import hwang.chiuchieh.rpc.util.IPUtils;
 import lombok.Data;
 
 import java.net.InetAddress;
@@ -20,12 +21,7 @@ import java.util.List;
 public class Provider<T> {
 
     public Provider() {
-        try {
-            //获取本地IP
-            host = InetAddress.getLocalHost().getHostAddress();
-        } catch (UnknownHostException e) {
-            throw new CchRpcException("can't get local address", e);
-        }
+        host = IPUtils.getLocalIP();
     }
 
     /**

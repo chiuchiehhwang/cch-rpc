@@ -1,11 +1,13 @@
 package hwang.chiuchieh.rpc.protocol.cch.loadbalance;
 
+import com.google.gson.Gson;
 import hwang.chiuchieh.rpc.Invocation;
 import hwang.chiuchieh.rpc.Invoker;
 import hwang.chiuchieh.rpc.RemoteInfo;
 import hwang.chiuchieh.rpc.exceptions.CchRpcException;
 import hwang.chiuchieh.rpc.protocol.api.LoadBalance;
 import hwang.chiuchieh.rpc.spi.SPIExt;
+import hwang.chiuchieh.rpc.util.IPUtils;
 import lombok.extern.slf4j.Slf4j;
 
 import java.security.MessageDigest;
@@ -19,8 +21,7 @@ public class ConsistentHashLoadBalance implements LoadBalance {
 
     @Override
     public RemoteInfo load(Invocation invocation, List<RemoteInfo> remoteInfos, SPIExt spiExt) {
-        Invoker invoker = invocation.getInvoker();
-        String callKey = invoker + invoker.getInterfaceName() + invocation.getMethodName();
+        String callKey = getInvokerHashKey(invocation);
         byte[] callMd5 = getMD5Bytes(callKey);
         long callIndex = getLongValue(0, callMd5);
 
@@ -34,6 +35,15 @@ public class ConsistentHashLoadBalance implements LoadBalance {
         }
 
         return hashContainer.get(hashContainer.ceilingKey(callIndex));
+    }
+
+    private String getInvokerHashKey(Invocation invocation) {
+        String key;
+        Invoker invoker = invocation.getInvoker();
+        String argsKey = new Gson().toJson(invocation.getArgs());
+        String localIP = IPUtils.getLocalIP();
+        key = localIP + invoker.getInterfaceName() + invocation.getMethodName() + argsKey;
+        return key;
     }
 
     private byte[] getMD5Bytes(String key) {

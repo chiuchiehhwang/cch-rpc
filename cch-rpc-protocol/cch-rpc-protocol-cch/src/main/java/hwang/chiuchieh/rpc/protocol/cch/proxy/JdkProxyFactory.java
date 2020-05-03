@@ -1,14 +1,15 @@
-package hwang.chiuchieh.rpc.protocol.cch;
+package hwang.chiuchieh.rpc.protocol.cch.proxy;
 
 import hwang.chiuchieh.rpc.Invoker;
 import hwang.chiuchieh.rpc.protocol.api.ProxyFactory;
+import hwang.chiuchieh.rpc.protocol.cch.CallHandler;
 import hwang.chiuchieh.rpc.spi.SPIExt;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
-public class CchProxyFactory implements ProxyFactory {
+public class JdkProxyFactory implements ProxyFactory {
 
 
     @Override

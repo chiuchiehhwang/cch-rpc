@@ -17,9 +17,9 @@ public class FailoverCluster extends AbstractCluster {
         Invoker invoker = invocation.getInvoker();
         int retryCounts = invoker.getRetryCounts();
         CchRpcException exception = null;
-        for(int count = 0; count < retryCounts + 1; count++) {
+        for (int count = 0; count < retryCounts + 1; count++) {
             List<RemoteInfo> remoteInfos = route(invocation, REGISTRY.getRemotes(invoker, spiExt));
-            RemoteInfo remoteInfo = LOAD_BALANCE.load(invocation, spiExt);
+            RemoteInfo remoteInfo = LOAD_BALANCE.load(invocation, remoteInfos, spiExt);
             invocation.setHost(remoteInfo.getHost());
             invocation.setPort(remoteInfo.getPort());
             try {

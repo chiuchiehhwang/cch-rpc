@@ -2,8 +2,6 @@ package hwang.chiuchieh.rpc;
 
 import lombok.Data;
 
-import java.lang.reflect.Method;
-
 @Data
 public class Invocation {
 

@@ -1,4 +1,4 @@
-package hwang.chiuchieh.rpc.protocol.cch.filter;
+package hwang.chiuchieh.rpc.protocol.cch.processor;
 
 import hwang.chiuchieh.rpc.Invocation;
 import hwang.chiuchieh.rpc.Invoker;
@@ -24,9 +24,7 @@ public class ClusterProcessor extends CchProcessor {
     private SPIExt getSPIExt(Invoker invoker) {
         SPIExt spiExt = new SPIExt();
         spiExt.put(SPIExt.SPI_REGISTRY, invoker.getRegistry());
-        //TODO
-        spiExt.put(SPIExt.SPI_CLUSTER, "failover");
-        spiExt.put(SPIExt.SPI_LOAD_BALANCE, "consistentHash");
+        //TODO Cluster LoadBalance的SPI扩展参数；目前取默认值
         return spiExt;
     }
 

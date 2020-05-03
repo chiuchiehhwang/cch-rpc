@@ -1,4 +1,4 @@
-package hwang.chiuchieh.rpc.protocol.cch.filter;
+package hwang.chiuchieh.rpc.protocol.cch.processor;
 
 import hwang.chiuchieh.rpc.Invocation;
 import hwang.chiuchieh.rpc.protocol.api.CchProcessor;

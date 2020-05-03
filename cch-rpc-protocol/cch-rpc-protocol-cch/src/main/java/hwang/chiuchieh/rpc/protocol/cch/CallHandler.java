@@ -2,9 +2,9 @@ package hwang.chiuchieh.rpc.protocol.cch;
 
 import hwang.chiuchieh.rpc.Invocation;
 import hwang.chiuchieh.rpc.Invoker;
-import hwang.chiuchieh.rpc.protocol.cch.filter.CallProcessor;
+import hwang.chiuchieh.rpc.protocol.cch.processor.CallProcessor;
 import hwang.chiuchieh.rpc.protocol.api.CchProcessor;
-import hwang.chiuchieh.rpc.protocol.cch.filter.ClusterProcessor;
+import hwang.chiuchieh.rpc.protocol.cch.processor.ClusterProcessor;
 
 import java.lang.reflect.Method;
 import java.util.List;

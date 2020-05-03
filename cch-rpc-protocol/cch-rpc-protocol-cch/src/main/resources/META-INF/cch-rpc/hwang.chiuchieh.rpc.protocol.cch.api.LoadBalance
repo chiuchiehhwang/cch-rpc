@@ -1,0 +1,1 @@
+consistentHash = hwang.chiuchieh.rpc.protocol.cch.loadbalance.ConsistentHashLoadBalance
