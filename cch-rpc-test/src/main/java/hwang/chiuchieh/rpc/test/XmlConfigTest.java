@@ -1,4 +1,4 @@
-package hwang.chiuchieh.rpc.test.module;
+package hwang.chiuchieh.rpc.test;
 
 import hwang.chiuchieh.rpc.config.ApplicationConfig;
 import org.springframework.context.ApplicationContext;

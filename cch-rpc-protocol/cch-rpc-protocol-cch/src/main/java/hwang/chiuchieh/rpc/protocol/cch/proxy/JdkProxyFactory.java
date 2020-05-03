@@ -16,7 +16,7 @@ public class JdkProxyFactory implements ProxyFactory {
     public <T> T getProxy(Invoker<T> invoker, SPIExt spiExt) {
         CchInvocationHandler<T> handler = new CchInvocationHandler<>(invoker);
         Object serverStub = Proxy.newProxyInstance(invoker.getClazz().getClassLoader(),
-                invoker.getClazz().getInterfaces(), handler);
+                new Class<?>[]{invoker.getClazz()}, handler);
 
         return (T) serverStub;
     }

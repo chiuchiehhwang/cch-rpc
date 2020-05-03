@@ -23,7 +23,7 @@ public class CallHandler {
         invocation.setMethodName(method.getName());
         invocation.setArgsTypes(method.getParameterTypes());
         invocation.setReturnType(method.getReturnType());
-        invocation.setArgs(args);
+        invocation.setArgsValues(args);
         return invocation;
     }
 

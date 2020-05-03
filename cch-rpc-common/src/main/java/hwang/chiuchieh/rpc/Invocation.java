@@ -13,7 +13,7 @@ public class Invocation {
 
     private Class<?> returnType;
 
-    private Object[] args;
+    private Object[] argsValues;
 
     private String host;
 

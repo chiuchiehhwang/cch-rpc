@@ -40,7 +40,7 @@ public class ConsistentHashLoadBalance implements LoadBalance {
     private String getInvokerHashKey(Invocation invocation) {
         String key;
         Invoker invoker = invocation.getInvoker();
-        String argsKey = new Gson().toJson(invocation.getArgs());
+        String argsKey = new Gson().toJson(invocation.getArgsValues());
         String localIP = IPUtils.getLocalIP();
         key = localIP + invoker.getInterfaceName() + invocation.getMethodName() + argsKey;
         return key;

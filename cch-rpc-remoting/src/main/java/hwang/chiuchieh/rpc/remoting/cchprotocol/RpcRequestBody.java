@@ -3,14 +3,18 @@ package hwang.chiuchieh.rpc.remoting.cchprotocol;
 import lombok.Data;
 
 @Data
-public class RpcRequestBody extends Body {
+public class RpcRequestBody implements Body {
 
     private String interfaceName;
 
-    private String method;
+    private String methodName;
 
-    private String[] paramTypes;
+    private Class<?>[] argsTypes;
 
-    private String[] paramValues;
+    private Object[] argsValues;
+
+    private Class<?> returnType;
+
+    private String serviceName;
 
 }

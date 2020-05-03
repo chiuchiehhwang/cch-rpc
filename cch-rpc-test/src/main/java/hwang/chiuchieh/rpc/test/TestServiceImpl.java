@@ -1,4 +1,4 @@
-package hwang.chiuchieh.rpc.test.module;
+package hwang.chiuchieh.rpc.test;
 
 public class TestServiceImpl implements TestService {
     @Override

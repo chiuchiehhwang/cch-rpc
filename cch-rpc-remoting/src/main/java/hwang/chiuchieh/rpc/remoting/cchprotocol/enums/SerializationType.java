@@ -2,7 +2,7 @@ package hwang.chiuchieh.rpc.remoting.cchprotocol.enums;
 
 public enum SerializationType {
 
-    gson(0, "gson");
+    gson(0, "gson, 00000");
 
     private Integer code;
     private String desc;

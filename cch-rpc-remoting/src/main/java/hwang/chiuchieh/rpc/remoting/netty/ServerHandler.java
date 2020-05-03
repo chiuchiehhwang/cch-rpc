@@ -9,6 +9,6 @@ public class ServerHandler extends SimpleChannelInboundHandler<RpcContext<RpcReq
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, RpcContext<RpcRequestBody> msg) throws Exception {
         RpcRequestBody body = msg.getBody();
-        //TODO
+
     }
 }

@@ -7,20 +7,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cch-rpc-test-module" />
         <module name="cch-rpc-common" />
         <module name="cch-rpc-protocol-api" />
-        <module name="cch-rpc-test-api" />
+        <module name="cch-rpc-test" />
         <module name="cch-rpc-registry-api" />
         <module name="cch-rpc-registry-zookeeper" />
         <module name="cch-rpc-core" />
-        <module name="cch-rpc-test-spitest" />
         <module name="cch-rpc-remoting" />
         <module name="cch-rpc-protocol-cch" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="11">
       <module name="cch-rpc-api" target="11" />
+      <module name="cch-rpc-test-api" target="11" />
+      <module name="cch-rpc-test-module" target="11" />
+      <module name="cch-rpc-test-spitest" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

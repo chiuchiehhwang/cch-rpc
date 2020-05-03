@@ -1,5 +1,6 @@
 package hwang.chiuchieh.rpc.remoting.netty;
 
+import hwang.chiuchieh.rpc.exceptions.CchRpcException;
 import hwang.chiuchieh.rpc.remoting.api.AbstractServer;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
@@ -55,6 +56,7 @@ public class NettyServer extends AbstractServer {
             }
         } catch (InterruptedException e) {
             log.error("等待Netty服务器启动过程中被中断");
+            throw new CchRpcException(e);
         }
         return false;
     }

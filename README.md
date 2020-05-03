@@ -6,7 +6,7 @@
 //TODO
 ### CCH协议
 协议头(120)
-+ Magic(16): 0xcce3
++ Magic(16): 0xcc83
 + MsgType(3)
   + 第一位
     + 0：请求
@@ -16,8 +16,7 @@
     + 为请求消息时
       + 00: RPC调用请求
     + 为响应消息时
-      + 00: 请求成功响应
-      + 01: 请求失败响应
+      + 00: RPC调用响应
 + SerializationId(5)
   + 00000: gson
 + RequestId(64)
@@ -31,7 +30,7 @@
 #### RPC调用请求体
 //TODO
 #### RPC调用响应体
-//TODO
+//TODO 
 ### License
 //TODO
 
