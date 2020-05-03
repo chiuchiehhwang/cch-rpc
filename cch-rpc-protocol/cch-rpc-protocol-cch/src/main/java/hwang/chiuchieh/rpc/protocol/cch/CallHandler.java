@@ -20,7 +20,9 @@ public class CallHandler {
     private Invocation buildInvocation(Invoker invoker, Method method, Object[] args) {
         Invocation invocation = new Invocation();
         invocation.setInvoker(invoker);
-        invocation.setMethod(method);
+        invocation.setMethodName(method.getName());
+        invocation.setArgsTypes(method.getParameterTypes());
+        invocation.setReturnType(method.getReturnType());
         invocation.setArgs(args);
         return invocation;
     }

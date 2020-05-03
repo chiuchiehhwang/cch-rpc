@@ -9,7 +9,11 @@ public class Invocation {
 
     private Invoker invoker;
 
-    private Method method;
+    private String methodName;
+
+    private Class<?>[] argsTypes;
+
+    private Class<?> returnType;
 
     private Object[] args;
 

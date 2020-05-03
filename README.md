@@ -32,6 +32,6 @@
 //TODO
 #### RPC调用响应体
 //TODO
-### Licence
+### License
 //TODO
 

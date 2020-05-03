@@ -2,7 +2,6 @@ package hwang.chiuchieh.rpc;
 
 import hwang.chiuchieh.rpc.config.ProtocolConfig;
 import hwang.chiuchieh.rpc.config.RegistryConfig;
-import hwang.chiuchieh.rpc.spi.SPIExt;
 import lombok.Data;
 
 import java.util.List;
@@ -35,7 +34,6 @@ public class Invoker<T> {
      * 路由规则, 暂时只支持前缀匹配、后缀匹配以及精确匹配
      * 如
      * [*.1.1]、[192.168.1.*]、[192.168.1.1]
-     *
      */
     private String routeRule;
 

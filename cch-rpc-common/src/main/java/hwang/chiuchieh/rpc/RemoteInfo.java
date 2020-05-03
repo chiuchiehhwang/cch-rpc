@@ -9,4 +9,9 @@ public class RemoteInfo {
 
     private Integer port;
 
+    @Override
+    public String toString() {
+        return host + ":" + port;
+    }
+
 }
