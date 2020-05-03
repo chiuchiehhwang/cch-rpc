@@ -146,7 +146,7 @@ public class ZookeeperRegistry implements Registry {
                 }
                 RemoteInfo remoteInfo = new RemoteInfo();
                 remoteInfo.setHost(host);
-                remoteInfo.setPort(port);
+                remoteInfo.setPort(Integer.valueOf(port));
                 remoteInfos.add(remoteInfo);
             }
             return remoteInfos;

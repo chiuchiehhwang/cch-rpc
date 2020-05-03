@@ -5,8 +5,8 @@ import lombok.Data;
 @Data
 public class RemoteInfo {
 
-    String host;
+    private String host;
 
-    String port;
+    private Integer port;
 
 }

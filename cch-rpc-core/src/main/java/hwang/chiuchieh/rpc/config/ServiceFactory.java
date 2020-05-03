@@ -14,13 +14,13 @@ public class ServiceFactory {
      * 协议实现，通过自适应扩展机制获取
      */
     private static Protocol PROTOCOL =
-            ExtensionLoader.getExtesionLoader(Protocol.class).getAdaptiveExtension();
+            ExtensionLoader.getExtensionLoader(Protocol.class).getAdaptiveExtension();
 
     /**
      * 注册中心实现，通过自适应扩展机制获取
      */
     private static Registry REGISTRY =
-            ExtensionLoader.getExtesionLoader(Registry.class).getAdaptiveExtension();
+            ExtensionLoader.getExtensionLoader(Registry.class).getAdaptiveExtension();
 
     /**
      * 服务导出入口

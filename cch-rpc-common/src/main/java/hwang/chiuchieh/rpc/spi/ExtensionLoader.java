@@ -33,8 +33,8 @@ public class ExtensionLoader<T> {
         holder = new ConcurrentHashMap<>();
     }
 
-    public static <T> ExtensionLoader<T> getExtesionLoader(Class<T> clazz) {
-        if(clazz == null) {
+    public static <T> ExtensionLoader<T> getExtensionLoader(Class<T> clazz) {
+        if (clazz == null) {
             throw new IllegalArgumentException("class == null");
         }
         ExtensionLoader loader = loaderCache.get(clazz);
@@ -46,14 +46,14 @@ public class ExtensionLoader<T> {
     }
 
     public T getExtension(String name) {
-        if(name == null || name.length() == 0) {
+        if (name == null || name.length() == 0) {
             return getDefaultExtension();
         }
         T instance = holder.get(name);
-        if(instance == null) {
+        if (instance == null) {
             synchronized (this) {
                 instance = holder.get(name);
-                if(instance == null) {
+                if (instance == null) {
                     instance = createExtension(name);
                     holder.put(name, instance);
                 }
@@ -65,7 +65,7 @@ public class ExtensionLoader<T> {
     public T getAdaptiveExtension() {
         if (adaptiveClass == null) {
             synchronized (this) {
-                if(adaptiveClass == null) {
+                if (adaptiveClass == null) {
                     InvocationHandler handler = new AdaptiveExtensionHandler();
                     adaptiveClass = (T) Proxy.newProxyInstance(
                             handler.getClass().getClassLoader(), new Class[]{type}, handler);
@@ -77,22 +77,22 @@ public class ExtensionLoader<T> {
 
     private T getDefaultExtension() {
         SPI spi = (SPI) type.getAnnotation(SPI.class);
-        if(spi == null) {
+        if (spi == null) {
             return null;
         }
         String defaultVal = spi.value();
-        if(defaultVal != null && defaultVal.length() != 0) {
+        if (defaultVal != null && defaultVal.length() != 0) {
             return getExtension(defaultVal);
         }
         return null;
     }
 
     private T createExtension(String name) {
-        if(classCache == null) {
+        if (classCache == null) {
             classCache = loadAllExtensionClass();
         }
         Class clazz = classCache.get(name);
-        if(clazz == null) {
+        if (clazz == null) {
             throw new IllegalStateException("no class named " + name);
         }
         T instance = null;
@@ -130,9 +130,9 @@ public class ExtensionLoader<T> {
 
     private void handleLine(String line, ConcurrentHashMap<String, Class> map) {
         int endIndex = line.indexOf('#');
-        if(endIndex == 0) {
+        if (endIndex == 0) {
             return;
-        } else if(endIndex > 0) {
+        } else if (endIndex > 0) {
             line = line.substring(0, endIndex).trim();
         } else {
             line = line.trim();
@@ -143,7 +143,7 @@ public class ExtensionLoader<T> {
         int splitIndex = line.indexOf('=');
         String name = line.substring(0, splitIndex).trim();
         String value = line.substring(splitIndex + 1).trim();
-        if(name.length() == 0 || value.length() == 0) {
+        if (name.length() == 0 || value.length() == 0) {
             //TODO log or exception
             return;
         }
@@ -161,18 +161,18 @@ public class ExtensionLoader<T> {
             boolean isTarget = false;
             SPIExt spiExt = null;
             for (Object arg : args) {
-                if(arg instanceof SPIExt) {
+                if (arg instanceof SPIExt) {
                     isTarget = true;
                     spiExt = (SPIExt) arg;
                     break;
                 }
             }
-            if(isTarget == false) {
+            if (isTarget == false) {
                 return null;
             }
             String extensionKey = "extension" + type.getSimpleName();
             String name = spiExt.get(extensionKey);
-            ExtensionLoader<T> extensionLoader = ExtensionLoader.getExtesionLoader(type);
+            ExtensionLoader<T> extensionLoader = ExtensionLoader.getExtensionLoader(type);
             T subject = extensionLoader.getExtension(name);
             Object result = method.invoke(subject, args);
             return result;

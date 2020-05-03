@@ -20,7 +20,7 @@ public class CchProtocol extends AbstractProtocol {
      * 代理工厂
      */
     private static ProxyFactory PROXY_FACTORY =
-            ExtensionLoader.getExtesionLoader(ProxyFactory.class).getAdaptiveExtension();
+            ExtensionLoader.getExtensionLoader(ProxyFactory.class).getAdaptiveExtension();
 
     @Override
     public void export(Provider provider, SPIExt spiExt) {

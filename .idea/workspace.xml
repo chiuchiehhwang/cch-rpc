@@ -2,41 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88de88a8-1ba3-4fa1-9da3-0bb8f6a2f500" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Invocation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CallHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/filter/CallProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/filter/CchProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/filter/ClusterProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/filter/RegistryProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/ClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/ClientMessageDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/ClientMessageEncoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/NettyClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java/hwang/chiuchieh/rpc/protocol/api/Cluster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/cluster/AbstractCluster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/cluster/FailoverCluster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/loadbalance/ConsistentHashLoadBalance.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Invoker.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Invoker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Provider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/config/ApplicationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/config/ProtocolConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/config/ProtocolConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/config/ReferenceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/config/ReferenceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/config/RegistryConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/config/RegistryConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/config/ServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/config/ServiceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/helper/ConfigHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/helper/ConfigHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/ExtensionLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/spi/ExtensionLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/ReferenceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/ReferenceBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/ServiceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/ServiceBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/RemoteInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/RemoteInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/spi/ExtensionLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/spi/ExtensionLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/spi/SPIExt.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/spi/SPIExt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/ServiceFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/ServiceFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-core/src/test/java/hwang/chiuchieh/rpc/config/ExtensionLoaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-test/cch-rpc-test-spitest/src/main/java/hwang/chiuchieh/rpc/test/spitest/ExtensionLoaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java/hwang/chiuchieh/rpc/protocol/api/Protocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java/hwang/chiuchieh/rpc/protocol/api/Protocol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java/hwang/chiuchieh/rpc/protocol/api/ProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java/hwang/chiuchieh/rpc/protocol/api/ProxyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java/hwang/chiuchieh/rpc/protocol/api/LoadBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java/hwang/chiuchieh/rpc/protocol/api/LoadBalance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CallHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CallHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CchProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CchProtocol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CchProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CchProxyFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/filter/CallProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/filter/CallProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/filter/CchProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java/hwang/chiuchieh/rpc/protocol/api/CchProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/filter/ClusterProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/filter/ClusterProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-zookeeper/src/main/java/hwang/chiuchieh/rpc/registry/zookeeper/ZookeeperRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-zookeeper/src/main/java/hwang/chiuchieh/rpc/registry/zookeeper/ZookeeperRegistry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/NettyServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/ServerMessageDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-remoting/src/main/java/hwang/chiuchieh/rpc/remoting/netty/ServerMessageDecoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,7 +255,8 @@
       <workItem from="1586912276103" duration="3561000" />
       <workItem from="1587000478460" duration="1832000" />
       <workItem from="1587195175327" duration="11270000" />
-      <workItem from="1588386213876" duration="24945000" />
+      <workItem from="1588386213876" duration="26871000" />
+      <workItem from="1588481422414" duration="9356000" />
     </task>
     <servers />
   </component>
@@ -284,10 +268,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="355" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1586160377417" />
-    <state x="530" y="75" key="#com.intellij.ide.util.MemberChooser" timestamp="1588425732731">
+    <state x="530" y="75" key="#com.intellij.ide.util.MemberChooser" timestamp="1588487106786">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="530" y="75" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1588425732731" />
+    <state x="530" y="75" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864@0.0.1536.864" timestamp="1588487106786" />
     <state x="204" y="346" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1586695173228">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -304,10 +288,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="295" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1588423896863" />
-    <state x="436" y="122" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1586694932272">
+    <state x="436" y="122" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588429689779">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="436" y="122" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1586694932272" />
+    <state x="436" y="122" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1588429689779" />
     <state x="570" y="123" key="FileChooserDialogImpl" timestamp="1586097115300">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -352,10 +336,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="242" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1586707386640" />
-    <state x="454" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1587195223048">
+    <state x="454" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1588481437268">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="454" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1587195223048" />
+    <state x="454" y="256" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1588481437268" />
     <state x="453" y="85" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1586095720093">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

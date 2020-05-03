@@ -1,6 +1,7 @@
 package hwang.chiuchieh.rpc.protocol.cch.filter;
 
 import hwang.chiuchieh.rpc.Invocation;
+import hwang.chiuchieh.rpc.protocol.api.CchProcessor;
 import hwang.chiuchieh.rpc.remoting.netty.NettyClient;
 
 public class CallProcessor extends CchProcessor {
