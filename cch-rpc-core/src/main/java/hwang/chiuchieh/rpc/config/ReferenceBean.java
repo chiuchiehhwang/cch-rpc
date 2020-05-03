@@ -14,7 +14,7 @@ import java.util.Set;
 public class ReferenceBean<T> extends ReferenceConfig<T> implements InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
-        refer();
+//        refer();
     }
 
     public T refer() {

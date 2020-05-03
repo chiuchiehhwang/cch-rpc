@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88de88a8-1ba3-4fa1-9da3-0bb8f6a2f500" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/util/IPUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/resources/META-INF/cch-rpc/hwang.chiuchieh.rpc.protocol.api.Cluster" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/resources/META-INF/cch-rpc/hwang.chiuchieh.rpc.protocol.cch.api.LoadBalance" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Invocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Invocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-common/src/main/java/hwang/chiuchieh/rpc/Provider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java/hwang/chiuchieh/rpc/protocol/api/ProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-api/src/main/java/hwang/chiuchieh/rpc/protocol/api/ProxyFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CallHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CallHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CchProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CchProtocol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/CchProxyFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/proxy/JdkProxyFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/cluster/FailoverCluster.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/cluster/FailoverCluster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/filter/CallProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/processor/CallProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/filter/ClusterProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/processor/ClusterProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/loadbalance/ConsistentHashLoadBalance.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/java/hwang/chiuchieh/rpc/protocol/cch/loadbalance/ConsistentHashLoadBalance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/resources/META-INF/cch-rpc/hwang.chiuchieh.rpc.protocol.api.ProxyFactory" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-protocol/cch-rpc-protocol-cch/src/main/resources/META-INF/cch-rpc/hwang.chiuchieh.rpc.protocol.api.ProxyFactory" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-zookeeper/src/main/java/hwang/chiuchieh/rpc/registry/zookeeper/ZookeeperRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-registry/cch-rpc-registry-zookeeper/src/main/java/hwang/chiuchieh/rpc/registry/zookeeper/ZookeeperRegistry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/ReferenceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/ReferenceBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/ServiceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/src/main/java/hwang/chiuchieh/rpc/config/ServiceBean.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +236,7 @@
       <workItem from="1587000478460" duration="1832000" />
       <workItem from="1587195175327" duration="11270000" />
       <workItem from="1588386213876" duration="26871000" />
-      <workItem from="1588481422414" duration="18336000" />
+      <workItem from="1588481422414" duration="19884000" />
     </task>
     <servers />
   </component>
@@ -329,6 +316,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="242" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1586707386640" />
+    <state x="569" y="80" key="VCS.ChangeListViewerDialog" timestamp="1588508688425">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="569" y="80" key="VCS.ChangeListViewerDialog/0.0.1536.864@0.0.1536.864" timestamp="1588508688425" />
     <state x="454" y="256" key="com.intellij.ide.util.TipDialog" timestamp="1588481437268">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

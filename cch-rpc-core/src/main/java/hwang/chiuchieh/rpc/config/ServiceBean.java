@@ -15,7 +15,7 @@ public class ServiceBean<T> extends ServiceConfig<T> implements InitializingBean
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        export();
+//        export();
     }
 
     public void export() {
