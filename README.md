@@ -32,5 +32,5 @@
 #### RPC调用响应体
 //TODO 
 ### License
-//TODO
+CCH-RPC遵循[APACHE LICENSE, VERSION 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)。
 
