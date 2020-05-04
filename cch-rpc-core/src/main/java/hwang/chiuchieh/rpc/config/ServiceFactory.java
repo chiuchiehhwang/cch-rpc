@@ -8,6 +8,12 @@ import hwang.chiuchieh.rpc.spi.ExtensionLoader;
 import hwang.chiuchieh.rpc.spi.SPIExt;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * @author Chiuchieh Hwang
+ * @date 2020/05/04
+ * <p>
+ * 服务导出和引入类
+ */
 @Slf4j
 public class ServiceFactory {
     /**

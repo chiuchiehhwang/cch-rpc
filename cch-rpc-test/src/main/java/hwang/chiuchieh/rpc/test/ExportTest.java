@@ -1,6 +1,7 @@
 package hwang.chiuchieh.rpc.test;
 
 import hwang.chiuchieh.rpc.config.*;
+import hwang.chiuchieh.rpc.test.api.TestService;
 
 public class ExportTest {
 
@@ -9,16 +10,13 @@ public class ExportTest {
         applicationConfig.setName("test-app");
 
         ProtocolConfig protocolConfig = new ProtocolConfig();
-        protocolConfig.setName("cch");
-        protocolConfig.setPort("2333");
 
         RegistryConfig registryConfig = new RegistryConfig();
-        registryConfig.setName("zookeeper");
         registryConfig.setHost("127.0.0.1");
         registryConfig.setPort("2334");
 
         ServiceBean<TestService> serviceConfig = new ServiceBean<>();
-        serviceConfig.setInterfaceName("hwang.chiuchieh.rpc.test.TestService");
+        serviceConfig.setClazz(TestService.class);
         serviceConfig.setRef(new TestServiceImpl());
         serviceConfig.setApplicationConfig(applicationConfig);
         serviceConfig.setProtocolConfig(protocolConfig);

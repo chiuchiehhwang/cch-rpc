@@ -32,7 +32,7 @@ public abstract class AbstractCluster implements Cluster {
         Invoker invoker = invocation.getInvoker();
         String routeRule = invoker.getRouteRule();
         //如果routeRule字段为空，则不进行路由过滤
-        if (StringUtils.isBlank(routeRule)) {
+        if (StringUtils.isEmpty(routeRule)) {
             return remoteInfos;
         }
         Set<RemoteInfo> newRemoteInfos = new HashSet<>();
@@ -48,7 +48,7 @@ public abstract class AbstractCluster implements Cluster {
 
     private Set<RemoteInfo> route(String rule, List<RemoteInfo> remoteInfos) {
         //如果某条规则为空，说明为非法规则，返回空
-        if (StringUtils.isBlank(rule)) {
+        if (StringUtils.isEmpty(rule)) {
             return new HashSet<>();
         }
         if (rule.startsWith("*")) {

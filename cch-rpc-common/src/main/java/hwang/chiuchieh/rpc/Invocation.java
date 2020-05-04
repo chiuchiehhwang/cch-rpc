@@ -2,10 +2,13 @@ package hwang.chiuchieh.rpc;
 
 import lombok.Data;
 
+/**
+ * RPC调用信息
+ */
 @Data
-public class Invocation {
+public class Invocation<T> {
 
-    private Invoker invoker;
+    private Invoker<T> invoker;
 
     private String methodName;
 

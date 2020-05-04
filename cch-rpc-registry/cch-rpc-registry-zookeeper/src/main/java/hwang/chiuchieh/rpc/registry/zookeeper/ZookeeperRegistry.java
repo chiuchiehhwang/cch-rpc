@@ -130,7 +130,7 @@ public class ZookeeperRegistry implements Registry {
             List<RemoteInfo> remoteInfos = new ArrayList<>();
             List<String> addresses = client.getChildren().forPath(providerPath);
             for (String addr : addresses) {
-                if (StringUtils.isBlank(addr)) {
+                if (StringUtils.isEmpty(addr)) {
                     continue;
                 }
                 String[] hostAndPort = addr.split(":");
@@ -139,7 +139,7 @@ public class ZookeeperRegistry implements Registry {
                 }
                 String host = hostAndPort[0];
                 String port = hostAndPort[1];
-                if (StringUtils.isBlank(host) || StringUtils.isBlank(port)) {
+                if (StringUtils.isEmpty(host) || StringUtils.isEmpty(port)) {
                     continue;
                 }
                 RemoteInfo remoteInfo = new RemoteInfo();

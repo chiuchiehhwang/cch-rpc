@@ -1,12 +1,18 @@
 package hwang.chiuchieh.rpc.util;
 
+/**
+ * @author Chiuchieh Hwang
+ * @date 2020/05/04
+ *
+ * String工具类
+ */
 public class StringUtils {
 
-    public static boolean isBlank(String str) {
-        return str == null || str.length() == 0;
+    public static boolean isEmpty(String str) {
+        return str == null || str.trim().length() == 0;
     }
 
-    public static boolean isNotBlank(String str) {
-        return !isBlank(str);
+    public static boolean isNotEmpty(String str) {
+        return !isEmpty(str);
     }
 }

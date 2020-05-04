@@ -1,6 +1,12 @@
 package hwang.chiuchieh.rpc.exceptions;
 
-public class CchRpcException extends RuntimeException{
+/**
+ * @author Chiuchieh Hwang
+ * @date 2020/05/04
+ * <p>
+ * CchRpc异常类
+ */
+public class CchRpcException extends RuntimeException {
 
     public CchRpcException() {
         super();

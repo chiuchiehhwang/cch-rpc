@@ -1,13 +1,8 @@
 package hwang.chiuchieh.rpc;
 
-import hwang.chiuchieh.rpc.config.ProtocolConfig;
-import hwang.chiuchieh.rpc.config.RegistryConfig;
-import hwang.chiuchieh.rpc.exceptions.CchRpcException;
 import hwang.chiuchieh.rpc.util.IPUtils;
 import lombok.Data;
 
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.util.List;
 
 /**
@@ -27,7 +22,7 @@ public class Provider<T> {
     /**
      * 协议类型，如cch
      */
-    private String protocol = ProtocolConfig.DEFAULT_PROTOCOL;
+    private String protocol;
 
     /**
      * 服务地址
@@ -37,7 +32,7 @@ public class Provider<T> {
     /**
      * 服务暴露端口
      */
-    private String port = ProtocolConfig.DEFAULT_PROTOCOL_PORT;
+    private String port;
 
     /**
      * 导出的服务
@@ -45,14 +40,29 @@ public class Provider<T> {
     private String interfaceName;
 
     /**
+     * 导出的服务类型
+     */
+    private Class<T> clazz;
+
+    /**
      * 导出的服务实例
      */
     private T obj;
 
     /**
+     * 序列化方式
+     */
+    private String serialization;
+
+    /**
+     * 传输方式
+     */
+    private String transport;
+
+    /**
      * 注册中心类型，如zookeeper
      */
-    private String registry = RegistryConfig.DEFAULT_REGISTRY;
+    private String registry;
 
     /**
      * 注册中心地址, host:port
