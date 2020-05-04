@@ -23,8 +23,7 @@ public class ClusterProcessor extends CchProcessor {
 
     private SPIExt getSPIExt(Invoker invoker) {
         SPIExt spiExt = new SPIExt();
-        spiExt.put(SPIExt.SPI_REGISTRY, invoker.getRegistry());
-        //TODO Cluster LoadBalance的SPI扩展参数；目前取默认值
+        spiExt.put(SPIExt.SPI_CLUSTER, invoker.getCluster());
         return spiExt;
     }
 

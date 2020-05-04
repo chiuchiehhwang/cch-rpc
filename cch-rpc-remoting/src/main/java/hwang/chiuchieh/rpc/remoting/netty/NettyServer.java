@@ -1,7 +1,8 @@
 package hwang.chiuchieh.rpc.remoting.netty;
 
 import hwang.chiuchieh.rpc.exceptions.CchRpcException;
-import hwang.chiuchieh.rpc.remoting.api.AbstractServer;
+import hwang.chiuchieh.rpc.remoting.api.Server;
+import hwang.chiuchieh.rpc.spi.SPIExt;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -16,7 +17,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Slf4j
-public class NettyServer extends AbstractServer {
+public class NettyServer implements Server {
 
     ServerHandler handler = new ServerHandler();
     ServerMessageDecoder decoder = new ServerMessageDecoder();
@@ -26,13 +27,8 @@ public class NettyServer extends AbstractServer {
 
     private static Map<String, NettyServer> serverMap = new ConcurrentHashMap<>();
 
-    public NettyServer(String port) {
-        super(port);
-    }
-
-
     @Override
-    public boolean openServer() {
+    public boolean openServer(String port, SPIExt spiExt) {
         if (serverMap.get(port) != null) {
             return true;
         }

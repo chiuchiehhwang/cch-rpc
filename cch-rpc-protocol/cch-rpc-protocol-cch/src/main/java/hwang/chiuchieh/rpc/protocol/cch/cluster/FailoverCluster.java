@@ -14,6 +14,9 @@ import java.util.List;
 public class FailoverCluster extends AbstractCluster {
     @Override
     public Object invoke(Invocation invocation, CchProcessor processor, SPIExt spiExt) {
+        spiExt.put(SPIExt.SPI_REGISTRY, invocation.getInvoker().getRegistry());
+        spiExt.put(SPIExt.SPI_LOAD_BALANCE, invocation.getInvoker().getLoadBalance());
+
         Invoker invoker = invocation.getInvoker();
         int retryCounts = invoker.getRetryCounts();
         CchRpcException exception = null;

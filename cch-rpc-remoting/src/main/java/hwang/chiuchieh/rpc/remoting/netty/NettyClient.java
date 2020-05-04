@@ -2,12 +2,14 @@ package hwang.chiuchieh.rpc.remoting.netty;
 
 import hwang.chiuchieh.rpc.Invocation;
 import hwang.chiuchieh.rpc.exceptions.CchRpcException;
+import hwang.chiuchieh.rpc.remoting.api.Client;
 import hwang.chiuchieh.rpc.remoting.cchprotocol.RpcContext;
 import hwang.chiuchieh.rpc.remoting.cchprotocol.RpcRequestBody;
 import hwang.chiuchieh.rpc.remoting.cchprotocol.enums.MsgType;
 import hwang.chiuchieh.rpc.remoting.cchprotocol.enums.SerializationType;
 import hwang.chiuchieh.rpc.remoting.util.InvocationUtils;
 import hwang.chiuchieh.rpc.remoting.util.RpcUtils;
+import hwang.chiuchieh.rpc.spi.SPIExt;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
@@ -20,7 +22,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.concurrent.BlockingQueue;
 
 @Slf4j
-public class NettyClient {
+public class NettyClient implements Client {
     ClientHandler handler = new ClientHandler();
     ClientMessageDecoder decoder = new ClientMessageDecoder();
     ClientMessageEncoder encoder = new ClientMessageEncoder();
@@ -29,7 +31,7 @@ public class NettyClient {
 
     Bootstrap bootstrap;
 
-    public Object invoke(Invocation invocation) {
+    public Object invoke(Invocation invocation, SPIExt spiExt) {
         if (bootstrap == null) {
             init();
         }
