@@ -1,7 +1,10 @@
 package hwang.chiuchieh.rpc.remoting.util;
 
+import hwang.chiuchieh.rpc.exceptions.CchRpcException;
 import hwang.chiuchieh.rpc.remoting.api.Serialization;
 import hwang.chiuchieh.rpc.remoting.cchprotocol.Body;
+import hwang.chiuchieh.rpc.remoting.cchprotocol.RpcResponseBody;
+import hwang.chiuchieh.rpc.remoting.cchprotocol.enums.FailType;
 import hwang.chiuchieh.rpc.remoting.cchprotocol.enums.MsgType;
 import hwang.chiuchieh.rpc.remoting.cchprotocol.enums.SerializationType;
 import hwang.chiuchieh.rpc.spi.ExtensionLoader;
@@ -28,8 +31,28 @@ public class RpcUtils {
         SPIExt spiExt = new SPIExt();
         spiExt.put(SPIExt.SPI_SERIALIZATION, sType.name());
 
-        byte[] bytes = SERIALIZATION.serialize(msgType, body, spiExt);
-        return bytes;
+        return SERIALIZATION.serialize(msgType, body, spiExt);
+    }
+
+    public static RpcResponseBody getFailBody(FailType failType) {
+       return getFailBody(failType, null);
+    }
+
+    public static RpcResponseBody getFailBody(FailType failType, Throwable e) {
+        RpcResponseBody body = new RpcResponseBody();
+        body.setSuccess(false);
+        body.setFailCode(failType.getCode());
+        body.setFailDesc(failType.getDesc());
+        if (e != null) {
+            body.setException(new CchRpcException(e));
+        }
+        return body;
+    }
+
+    public static RpcResponseBody getSuccessBody(Object result) {
+        RpcResponseBody body = new RpcResponseBody();
+        body.setReturnVal(result);
+        return body;
     }
 
     public static long getRequestId() {

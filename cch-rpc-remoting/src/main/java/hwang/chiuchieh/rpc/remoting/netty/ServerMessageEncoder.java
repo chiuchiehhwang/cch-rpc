@@ -1,5 +1,6 @@
 package hwang.chiuchieh.rpc.remoting.netty;
 
+import hwang.chiuchieh.rpc.remoting.Constant;
 import hwang.chiuchieh.rpc.remoting.cchprotocol.RpcContext;
 import hwang.chiuchieh.rpc.remoting.cchprotocol.RpcResponseBody;
 import hwang.chiuchieh.rpc.remoting.util.RpcUtils;
@@ -10,7 +11,7 @@ import io.netty.handler.codec.MessageToByteEncoder;
 public class ServerMessageEncoder extends MessageToByteEncoder<RpcContext<RpcResponseBody>> {
     @Override
     protected void encode(ChannelHandlerContext ctx, RpcContext<RpcResponseBody> msg, ByteBuf out) throws Exception {
-        int magicNum = 0xcce3;
+        int magicNum = Constant.MAGIC_NUM;
         int msgTypeCode = msg.getMsgType().getCode();
         int serializationId = msg.getSerializationType().getCode();
         byte msgTypeAndSerializationType = ((Integer) ((msgTypeCode << 5) | serializationId)).byteValue();

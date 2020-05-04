@@ -1,5 +1,6 @@
 package hwang.chiuchieh.rpc.remoting.netty;
 
+import hwang.chiuchieh.rpc.remoting.Constant;
 import hwang.chiuchieh.rpc.remoting.cchprotocol.Body;
 import hwang.chiuchieh.rpc.remoting.cchprotocol.RpcContext;
 import hwang.chiuchieh.rpc.remoting.cchprotocol.enums.MsgType;
@@ -16,7 +17,7 @@ public class ClientMessageDecoder extends ReplayingDecoder<Void> {
     @Override
     protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
         int magicNum = in.readUnsignedShort();
-        if (magicNum != 0xcc83) {
+        if (magicNum != Constant.MAGIC_NUM) {
             throw new MagicIncorrectException();
         }
         byte msgTypeAndSerialization = in.readByte();

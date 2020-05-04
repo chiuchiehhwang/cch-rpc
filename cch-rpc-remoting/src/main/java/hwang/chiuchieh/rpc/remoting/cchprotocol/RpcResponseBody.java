@@ -3,11 +3,9 @@ package hwang.chiuchieh.rpc.remoting.cchprotocol;
 import lombok.Data;
 
 @Data
-public class RpcResponseBody implements Body {
+public class RpcResponseBody extends Body {
 
-    private Boolean success;
-
-    private Boolean hasReturnVal;
+    private Boolean success = true;
 
     private Object returnVal;
 
@@ -15,6 +13,6 @@ public class RpcResponseBody implements Body {
 
     private String failDesc;
 
-    private Throwable throwable;
+    private Exception exception;
 
 }

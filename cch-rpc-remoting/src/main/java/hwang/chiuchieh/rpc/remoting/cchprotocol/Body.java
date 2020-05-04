@@ -2,5 +2,5 @@ package hwang.chiuchieh.rpc.remoting.cchprotocol;
 
 import java.io.Serializable;
 
-public interface Body extends Serializable {
+public class Body implements Serializable {
 }

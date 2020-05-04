@@ -1,6 +1,6 @@
 package hwang.chiuchieh.rpc.remoting.netty;
 
-import com.google.gson.Gson;
+import hwang.chiuchieh.rpc.remoting.Constant;
 import hwang.chiuchieh.rpc.remoting.cchprotocol.RpcContext;
 import hwang.chiuchieh.rpc.remoting.cchprotocol.RpcRequestBody;
 import hwang.chiuchieh.rpc.remoting.util.RpcUtils;
@@ -11,15 +11,12 @@ import io.netty.handler.codec.MessageToByteEncoder;
 public class ClientMessageEncoder extends MessageToByteEncoder<RpcContext<RpcRequestBody>> {
     @Override
     protected void encode(ChannelHandlerContext ctx, RpcContext<RpcRequestBody> msg, ByteBuf out) throws Exception {
-        int magicNum = 0xcce3;
+        int magicNum = Constant.MAGIC_NUM;
         int msgTypeCode = msg.getMsgType().getCode();
         int serializationId = msg.getSerializationType().getCode();
         byte msgTypeAndSerializationType = ((Integer) ((msgTypeCode << 5) | serializationId)).byteValue();
         long requestId = msg.getRequestId();
-//        byte[] bodyByte = RpcUtils.getBodyByte(msg.getMsgType(), msg.getSerializationType(), msg.getBody());
-        RpcRequestBody body = msg.getBody();
-        String str = new Gson().toJson(body);
-        byte[] bodyByte = str.getBytes();
+        byte[] bodyByte = RpcUtils.getBodyByte(msg.getMsgType(), msg.getSerializationType(), msg.getBody());
         int bodyLength = bodyByte.length;
 
         out.writeShort(magicNum);

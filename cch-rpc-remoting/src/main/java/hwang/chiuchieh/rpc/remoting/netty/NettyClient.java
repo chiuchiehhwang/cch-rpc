@@ -1,10 +1,12 @@
 package hwang.chiuchieh.rpc.remoting.netty;
 
 import hwang.chiuchieh.rpc.Invocation;
+import hwang.chiuchieh.rpc.exceptions.CchRpcException;
 import hwang.chiuchieh.rpc.remoting.cchprotocol.RpcContext;
 import hwang.chiuchieh.rpc.remoting.cchprotocol.RpcRequestBody;
 import hwang.chiuchieh.rpc.remoting.cchprotocol.enums.MsgType;
 import hwang.chiuchieh.rpc.remoting.cchprotocol.enums.SerializationType;
+import hwang.chiuchieh.rpc.remoting.util.InvocationUtils;
 import hwang.chiuchieh.rpc.remoting.util.RpcUtils;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.Channel;
@@ -14,6 +16,8 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import lombok.extern.slf4j.Slf4j;
+
+import java.util.concurrent.BlockingQueue;
 
 @Slf4j
 public class NettyClient {
@@ -30,9 +34,19 @@ public class NettyClient {
             init();
         }
         Channel channel = bootstrap.connect(invocation.getHost(), invocation.getPort()).channel();
-        channel.writeAndFlush(getRpcContext(invocation));
+        RpcContext rpcContext = getRpcContext(invocation);
 
-        return new Object();
+        long requestId = rpcContext.getRequestId();
+        BlockingQueue<Object> queue = InvocationUtils.getWaitQueue(requestId);
+
+        channel.writeAndFlush(rpcContext);
+
+        try {
+            Object result = queue.take();
+            return result;
+        } catch (Exception e) {
+            throw new CchRpcException(e);
+        }
     }
 
     private synchronized void init() {

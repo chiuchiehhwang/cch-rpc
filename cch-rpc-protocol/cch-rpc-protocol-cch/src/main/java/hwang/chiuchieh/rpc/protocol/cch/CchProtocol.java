@@ -5,6 +5,7 @@ import hwang.chiuchieh.rpc.Provider;
 import hwang.chiuchieh.rpc.protocol.api.AbstractProtocol;
 import hwang.chiuchieh.rpc.protocol.api.ProxyFactory;
 import hwang.chiuchieh.rpc.remoting.netty.NettyServer;
+import hwang.chiuchieh.rpc.remoting.util.InvocationUtils;
 import hwang.chiuchieh.rpc.spi.ExtensionLoader;
 import hwang.chiuchieh.rpc.spi.SPIExt;
 
@@ -13,8 +14,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 
 public class CchProtocol extends AbstractProtocol {
-
-    protected static Map<String, Provider> providerMap = new ConcurrentHashMap<>();
 
     /**
      * 代理工厂
@@ -25,11 +24,8 @@ public class CchProtocol extends AbstractProtocol {
     @Override
     public void export(Provider provider, SPIExt spiExt) {
         NettyServer nettyServer = new NettyServer(provider.getPort());
+        InvocationUtils.addProvider(provider);
         nettyServer.openServer();
-        Provider existProvider = providerMap.get(provider.getInterfaceName());
-        if (existProvider == null) {
-            providerMap.putIfAbsent(provider.getInterfaceName(), provider);
-        }
     }
 
     @Override
