@@ -21,6 +21,7 @@ public class IPUtils {
     public static String getLocalIP() {
         try {
             //获取本地IP
+            //TODO 获取公网IP
             return InetAddress.getLocalHost().getHostAddress();
         } catch (UnknownHostException e) {
             throw new CchRpcException("can't get local address", e);

@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88de88a8-1ba3-4fa1-9da3-0bb8f6a2f500" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/cch-rpc-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cch-rpc-test/src/main/java/hwang/chiuchieh/rpc/test/ExtensionLoaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cch-rpc-test/src/main/java/hwang/chiuchieh/rpc/test/ExtensionLoaderTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="88de88a8-1ba3-4fa1-9da3-0bb8f6a2f500" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,8 +17,8 @@
         <option value="spring-beans.schema" />
         <option value="Enum" />
         <option value="JUnit4 Test Class" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -53,7 +50,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/cch-rpc-remoting/src/main" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cch-rpc-remoting/src/main/resources/META-INF/cch-rpc" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -91,14 +88,14 @@
       <recent name="test" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-remoting\src\main\resources\META-INF\cch-rpc" />
       <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-remoting\src\main" />
       <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-protocol\cch-rpc-protocol-cch\src\main\resources\META-INF\cch-rpc" />
       <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-registry\cch-rpc-registry-zookeeper\src\main\resources" />
       <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-registry\src\main\resources" />
-      <recent name="E:\我爱学习\study\cch-rpc\cch-rpc-protocol\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ExtensionLoaderTest">
+  <component name="RunManager" selected="Application.ReferTest">
     <configuration name="ExportTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hwang.chiuchieh.rpc.test.ExportTest" />
       <module name="cch-rpc-test" />
@@ -169,9 +166,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ExtensionLoaderTest" />
         <item itemvalue="Application.ReferTest" />
         <item itemvalue="Application.ExportTest" />
+        <item itemvalue="Application.ExtensionLoaderTest" />
         <item itemvalue="Application.StringUtils" />
         <item itemvalue="JUnit.ExportTest.export" />
       </list>
@@ -230,7 +227,7 @@
       <workItem from="1587195175327" duration="11270000" />
       <workItem from="1588386213876" duration="26871000" />
       <workItem from="1588481422414" duration="45758000" />
-      <workItem from="1588578335736" duration="21244000" />
+      <workItem from="1588578335736" duration="22993000" />
     </task>
     <servers />
   </component>
@@ -238,10 +235,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="355" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588505913368">
+    <state x="355" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588606509231">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="355" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1588505913368" />
+    <state x="355" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1588606509231" />
     <state x="530" y="75" key="#com.intellij.ide.util.MemberChooser" timestamp="1588487106786">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -270,22 +267,22 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="570" y="123" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1588577515021" />
-    <state width="1483" height="216" key="GridCell.Tab.0.bottom" timestamp="1588606054205">
+    <state width="1483" height="216" key="GridCell.Tab.0.bottom" timestamp="1588607836040">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1483" height="216" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1588606054205" />
-    <state width="1483" height="216" key="GridCell.Tab.0.center" timestamp="1588606054205">
+    <state width="1483" height="216" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1588607836040" />
+    <state width="1483" height="216" key="GridCell.Tab.0.center" timestamp="1588607836039">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1483" height="216" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1588606054205" />
-    <state width="1483" height="216" key="GridCell.Tab.0.left" timestamp="1588606054205">
+    <state width="1483" height="216" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1588607836039" />
+    <state width="1483" height="216" key="GridCell.Tab.0.left" timestamp="1588607836039">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1483" height="216" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1588606054205" />
-    <state width="1483" height="216" key="GridCell.Tab.0.right" timestamp="1588606054205">
+    <state width="1483" height="216" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1588607836039" />
+    <state width="1483" height="216" key="GridCell.Tab.0.right" timestamp="1588607836039">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1483" height="216" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1588606054205" />
+    <state width="1483" height="216" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1588607836039" />
     <state width="1483" height="245" key="GridCell.Tab.1.bottom" timestamp="1588604839089">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
