@@ -5,6 +5,7 @@ import hwang.chiuchieh.rpc.exceptions.CchRpcException;
 import hwang.chiuchieh.rpc.remoting.api.Serialization;
 import hwang.chiuchieh.rpc.remoting.cchprotocol.Body;
 import hwang.chiuchieh.rpc.remoting.cchprotocol.RpcRequestBody;
+import hwang.chiuchieh.rpc.remoting.cchprotocol.RpcResponseBody;
 import hwang.chiuchieh.rpc.remoting.cchprotocol.enums.MsgType;
 import hwang.chiuchieh.rpc.spi.SPIExt;
 import lombok.extern.slf4j.Slf4j;
@@ -15,8 +16,10 @@ public class GsonSerialization implements Serialization {
     public Body deserialize(MsgType msgType, byte[] bodyByte, SPIExt spiExt) {
         try {
             switch (msgType) {
-                case RequestRpc:
+                case RpcRequest:
                     return new Gson().fromJson(new String(bodyByte, "UTF-8"), RpcRequestBody.class);
+                case RpcResponse:
+                    return new Gson().fromJson(new String(bodyByte, "UTF-8"), RpcResponseBody.class);
                 default:
                     return null;
             }
@@ -30,7 +33,9 @@ public class GsonSerialization implements Serialization {
     public byte[] serialize(MsgType msgType, Body body, SPIExt spiExt) {
         try {
             switch (msgType) {
-                case ResponseRpc:
+                case RpcResponse:
+                    return new Gson().toJson(body).getBytes("UTF-8");
+                case RpcRequest:
                     return new Gson().toJson(body).getBytes("UTF-8");
                 default:
                     return null;

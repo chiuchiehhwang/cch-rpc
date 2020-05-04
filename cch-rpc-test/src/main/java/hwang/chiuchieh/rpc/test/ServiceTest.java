@@ -27,6 +27,12 @@ public class ServiceTest {
         serviceConfig.setRegistryConfig(registryConfig);
 
         serviceConfig.export();
+
+        try {
+            System.in.read();
+        } catch (Exception e) {
+            System.out.println("System.in.read()发生异常");
+        }
     }
 
     @Test
@@ -52,6 +58,7 @@ public class ServiceTest {
 
         TestService testService = referenceConfig.refer();
 
-        testService.testMethod("aaa", "bbb");
+        String result = testService.testMethod("aaa", "bbb");
+        System.out.println(result);
     }
 }

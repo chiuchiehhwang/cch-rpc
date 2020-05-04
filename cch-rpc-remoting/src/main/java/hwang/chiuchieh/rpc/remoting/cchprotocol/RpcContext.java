@@ -7,13 +7,11 @@ import lombok.Data;
 @Data
 public class RpcContext<T extends Body> {
 
-    protected MsgType msgType;
+    private MsgType msgType;
 
-    protected SerializationType serializationType;
+    private SerializationType serializationType;
 
-    protected Long requestId;
+    private Long requestId;
 
-    protected Integer bodyLength;
-
-    T body;
+    private T body;
 }

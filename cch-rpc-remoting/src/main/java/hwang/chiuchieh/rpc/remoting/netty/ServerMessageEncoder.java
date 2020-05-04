@@ -24,5 +24,4 @@ public class ServerMessageEncoder extends MessageToByteEncoder<RpcContext<RpcRes
         out.writeInt(bodyLength);
         out.writeBytes(bodyByte);
     }
-
 }

@@ -44,9 +44,13 @@
         </dependency>
         <dependency>
             <groupId>hwang.chiuchieh</groupId>
-            <artifactId>cch-rpc-config</artifactId>
+            <artifactId>cch-rpc-remoting</artifactId>
             <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>hwang.chiuchieh</groupId>
+            <artifactId>cch-rpc-core</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

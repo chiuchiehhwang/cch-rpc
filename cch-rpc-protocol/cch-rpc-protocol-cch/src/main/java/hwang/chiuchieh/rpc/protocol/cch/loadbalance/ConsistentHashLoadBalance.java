@@ -60,9 +60,9 @@ public class ConsistentHashLoadBalance implements LoadBalance {
 
     private long getLongValue(int index, byte[] md5) {
         long index1 = (md5[index] & 0xFF) << 24;
-        long index2 = (md5[index] & 0xFF) << 16;
-        long index3 = (md5[index] & 0xFF) << 8;
-        long index4 = (md5[index] & 0xFF);
+        long index2 = (md5[index + 1] & 0xFF) << 16;
+        long index3 = (md5[index + 2] & 0xFF) << 8;
+        long index4 = (md5[index + 3] & 0xFF);
         return index1 | index2 | index3 | index4;
     }
 }

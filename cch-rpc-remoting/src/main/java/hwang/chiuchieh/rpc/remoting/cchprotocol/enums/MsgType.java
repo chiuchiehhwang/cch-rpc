@@ -2,8 +2,8 @@ package hwang.chiuchieh.rpc.remoting.cchprotocol.enums;
 
 public enum MsgType {
 
-    RequestRpc(0, "RPC请求, 000"),
-    ResponseRpc(4, "RPC响应, 100");
+    RpcRequest(0, "RPC请求, 000"),
+    RpcResponse(4, "RPC响应, 100");
 
     private Integer code;
     private String desc;

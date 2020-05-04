@@ -7,6 +7,8 @@ import hwang.chiuchieh.rpc.remoting.cchprotocol.enums.SerializationType;
 import hwang.chiuchieh.rpc.spi.ExtensionLoader;
 import hwang.chiuchieh.rpc.spi.SPIExt;
 
+import java.util.UUID;
+
 public class RpcUtils {
 
     /**
@@ -26,8 +28,35 @@ public class RpcUtils {
         SPIExt spiExt = new SPIExt();
         spiExt.put(SPIExt.SPI_SERIALIZATION, sType.name());
 
-        return SERIALIZATION.serialize(msgType, body, spiExt);
+        byte[] bytes = SERIALIZATION.serialize(msgType, body, spiExt);
+        return bytes;
+    }
 
+    public static long getRequestId() {
+        String uuid = UUID.randomUUID().toString();
+        byte[] uuidBytes = uuid.getBytes();
+        long requestId = 0;
+        int index = 0;
+        for (; index <= uuidBytes.length - 8; index++) {
+            requestId = requestId ^ getLongValue(index, uuidBytes);
+        }
+        if (index > uuidBytes.length - 8) {
+            requestId = requestId ^ getLongValue(uuidBytes.length - 8, uuidBytes);
+        }
+        requestId = requestId ^ System.currentTimeMillis();
+        return requestId;
+    }
+
+    private static long getLongValue(int index, byte[] bytes) {
+        long index1 = (bytes[index] & 0xFF) << 56;
+        long index2 = (bytes[index + 1] & 0xFF) << 48;
+        long index3 = (bytes[index + 2] & 0xFF) << 40;
+        long index4 = (bytes[index + 3] & 0xFF) << 32;
+        long index5 = (bytes[index + 4] & 0xFF) << 24;
+        long index6 = (bytes[index + 5] & 0xFF) << 16;
+        long index7 = (bytes[index + 6] & 0xFF) << 8;
+        long index8 = (bytes[index + 7] & 0xFF);
+        return index1 | index2 | index3 | index4 | index5 | index6 | index7 | index8;
     }
 
 }

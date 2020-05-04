@@ -9,11 +9,11 @@ public class RpcRequestBody implements Body {
 
     private String methodName;
 
-    private Class<?>[] argsTypes;
+    private String[] argsTypes;
 
     private Object[] argsValues;
 
-    private Class<?> returnType;
+    private String returnType;
 
     private String serviceName;
 

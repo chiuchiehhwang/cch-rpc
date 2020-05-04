@@ -29,7 +29,7 @@ public class ServerMessageDecoder extends ReplayingDecoder<Void> {
         byte[] bodyByte = new byte[bodyLength];
         in.readBytes(bodyByte, 0, bodyLength);
 
-        if (msgType != MsgType.RequestRpc) {
+        if (msgType != MsgType.RpcRequest) {
             return;
         }
 
@@ -39,11 +39,8 @@ public class ServerMessageDecoder extends ReplayingDecoder<Void> {
         rpcContext.setMsgType(msgType);
         rpcContext.setSerializationType(serializationType);
         rpcContext.setRequestId(requestId);
-        rpcContext.setBodyLength(bodyLength);
         rpcContext.setBody(body);
 
         out.add(rpcContext);
     }
-
-
 }
