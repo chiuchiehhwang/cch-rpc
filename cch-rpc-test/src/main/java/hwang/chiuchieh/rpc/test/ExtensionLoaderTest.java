@@ -3,11 +3,9 @@ package hwang.chiuchieh.rpc.test;
 import hwang.chiuchieh.rpc.spi.ExtensionLoader;
 import hwang.chiuchieh.rpc.spi.SPIExt;
 import hwang.chiuchieh.rpc.test.api.SPITest;
-import org.junit.Test;
 
 public class ExtensionLoaderTest {
 
-    @Test
     public void getExtension() {
         //测试SPI机制 获取指定名称扩展
         ExtensionLoader<SPITest> extensionLoader = ExtensionLoader.getExtensionLoader(SPITest.class);
@@ -21,7 +19,6 @@ public class ExtensionLoaderTest {
         System.out.println(result);
     }
 
-    @Test
     public void getAdaptiveExtension() {
         //测试自适应拓展机制
         ExtensionLoader<SPITest> extensionLoader = ExtensionLoader.getExtensionLoader(SPITest.class);
@@ -30,5 +27,11 @@ public class ExtensionLoaderTest {
         spiExt.put("extensionSPITest", "spi-test2");
         String result = testObj.testMethod(spiExt);
         System.out.println(result);
+    }
+
+    public static void main(String[] args) {
+        ExtensionLoaderTest test = new ExtensionLoaderTest();
+        test.getExtension();
+        test.getAdaptiveExtension();
     }
 }
