@@ -15,6 +15,5 @@
         <module>cch-rpc-registry-api</module>
         <module>cch-rpc-registry-zookeeper</module>
     </modules>
-
-
+    
 </project>
