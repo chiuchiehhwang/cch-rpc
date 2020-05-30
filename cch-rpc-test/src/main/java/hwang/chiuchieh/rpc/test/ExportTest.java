@@ -23,12 +23,6 @@ public class ExportTest {
         serviceConfig.setRegistryConfig(registryConfig);
 
         serviceConfig.export();
-
-        try {
-            System.in.read();
-        } catch (Exception e) {
-            System.out.println("System.in.read()发生异常");
-        }
     }
 
     public static void main(String[] args) {
